@@ -1,0 +1,33 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "curl",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-http": {},
+        "apt": {
+            "packages": []
+        },
+        "leadership": {},
+        "ibm-im": {},
+        "ibm-base": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-im",
+        "interface:was-ihs"
+    ],
+    "is": "ibm-http"
+}

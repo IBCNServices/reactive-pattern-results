@@ -1,0 +1,24 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-base",
+        "interface:nfsstorage",
+        "interface:platformmaster"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "curl"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {},
+        "ibm-platform-symphony-master": {}
+    },
+    "is": "ibm-platform-symphony-master"
+}

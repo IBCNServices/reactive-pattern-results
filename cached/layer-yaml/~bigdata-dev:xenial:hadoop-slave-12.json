@@ -1,0 +1,60 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "users": {
+                "ubuntu": {
+                    "groups": [
+                        "hadoop",
+                        "hadoop"
+                    ]
+                }
+            },
+            "ports": {
+                "dn_webapp_http": {
+                    "port": 50075,
+                    "exposed_on": "datanode"
+                },
+                "nm_webapp_http": {
+                    "port": 8042,
+                    "exposed_on": "nodemanager"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "1.1.0",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_repo_url": "http://bigtop-repos.s3.amazonaws.com/releases/{version}/{dist}/{series}/{arch}",
+            "bigtop_global_hiera": "/etc/puppet/hiera.yaml",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml"
+        },
+        "hadoop-slave": {},
+        "hadoop-nodemanager": {},
+        "hadoop-datanode": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "interface:dfs-slave",
+        "layer:apache-bigtop-base",
+        "interface:mapred-slave",
+        "layer:hadoop-datanode",
+        "layer:hadoop-nodemanager"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/hadoop/layer-hadoop-slave",
+    "is": "hadoop-slave"
+}

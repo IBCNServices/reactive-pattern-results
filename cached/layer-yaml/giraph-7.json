@@ -1,0 +1,39 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "build-essential",
+                "git",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "nvidia-cuda": {},
+        "apache-bigtop-base": {
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "giraph": {}
+    },
+    "repo": "https://github.com/panagiotisl/bigtop/tree/master/bigtop-packages/src/charm/giraph/layer-giraph",
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "interface:giraph",
+        "layer:apache-bigtop-base"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "is": "giraph"
+}

@@ -1,0 +1,22 @@
+{
+    "options": {
+        "ceph-collector": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:influxdb-api"
+    ],
+    "repo": "git@git.cmacinfo.com:charm-stuff/juju-layer-ceph-collector.git",
+    "is": "ceph-collector"
+}

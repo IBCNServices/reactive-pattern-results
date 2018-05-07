@@ -1,0 +1,26 @@
+{
+    "options": {
+        "apache-nifi": {},
+        "java": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "name": "java",
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:java",
+        "interface:http",
+        "interface:zookeeper"
+    ],
+    "repo": "git@github.com:Qrama/layer-Apache-NiFi.git",
+    "is": "apache-nifi"
+}

@@ -1,0 +1,36 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "openjdk-8-jre-headless",
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "basic": {
+            "packages": [
+                "apache2-utils"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "elastic-base": {
+            "elastic-pkg": "kibana"
+        },
+        "kibana": {},
+        "elasticsearch-client": {},
+        "nginx": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "interface:elasticsearch",
+        "layer:elastic-base",
+        "layer:elasticsearch-client"
+    ],
+    "repo": "https://github.com/omnivector-solutions/layer-kibana",
+    "is": "kibana"
+}

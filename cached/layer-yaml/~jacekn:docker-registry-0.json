@@ -1,0 +1,38 @@
+{
+    "options": {
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "nagios": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "debug": {},
+        "docker": {
+            "skip-install": false
+        },
+        "docker-registry": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:debug",
+        "layer:nagios",
+        "interface:dockerhost",
+        "interface:sdn-plugin",
+        "layer:apt",
+        "layer:docker",
+        "interface:http"
+    ],
+    "repo": "https://github.com/caio1982/docker-registry-charm",
+    "exclude": [
+        "LAYER_README.md",
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "docker-registry"
+}

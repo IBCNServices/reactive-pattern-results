@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "layer-ibm-dsm": {},
+        "ibm-dsm-base": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:layer-ibm-dsm"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-dsm-base/trunk/",
+    "is": "ibm-dsm-base"
+}

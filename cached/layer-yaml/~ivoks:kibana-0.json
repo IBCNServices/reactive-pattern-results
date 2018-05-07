@@ -1,0 +1,31 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full",
+                "kibana"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "nginx": {},
+        "kibana": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:basic",
+        "interface:http",
+        "layer:nginx",
+        "layer:apt",
+        "interface:elasticsearch"
+    ],
+    "repo": "https://github.com/jamesbeedy/juju-charm-kibana",
+    "is": "kibana"
+}

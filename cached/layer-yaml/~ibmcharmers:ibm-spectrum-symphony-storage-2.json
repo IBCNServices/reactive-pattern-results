@@ -1,0 +1,29 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "rpm",
+                "nfs-kernel-server"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {},
+        "ibm-spectrum-symphony-storage": {},
+        "apt": {
+            "packages": []
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:ibm-base",
+        "interface:nfsstorage"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/ibmlayers/layer-ibm-spectrum-symphony-storage/",
+    "is": "ibm-spectrum-symphony-storage"
+}

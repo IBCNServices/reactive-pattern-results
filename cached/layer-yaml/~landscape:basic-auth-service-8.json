@@ -1,0 +1,23 @@
+{
+    "options": {
+        "snap": {},
+        "basic-auth-service": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "nagios": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:snap",
+        "layer:nagios",
+        "interface:basic-auth-check",
+        "interface:http",
+        "interface:pgsql"
+    ],
+    "repo": "https://github.com/CanonicalLtd/basic-auth-service-charm",
+    "is": "basic-auth-service"
+}

@@ -1,0 +1,17 @@
+{
+    "options": {
+        "ibm-platform-lsf-server": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-platform-lsf-server/trunk/",
+    "includes": [
+        "layer:basic",
+        "interface:nfsstorage",
+        "interface:platformmaster"
+    ],
+    "is": "ibm-platform-lsf-server"
+}

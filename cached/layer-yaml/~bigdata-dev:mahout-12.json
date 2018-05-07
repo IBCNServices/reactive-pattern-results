@@ -1,0 +1,34 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "mahout": {},
+        "apache-bigtop-base": {
+            "install_java": "openjdk-8-jdk",
+            "bigtop_version": "1.2.0",
+            "bigtop_component_list": "hadoop"
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "interface:java",
+        "layer:apache-bigtop-base"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/mahout/layer-mahout",
+    "is": "mahout"
+}

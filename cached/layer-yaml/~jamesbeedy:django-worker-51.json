@@ -1,0 +1,54 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "python3-venv",
+                "python3-pip",
+                "python3-all",
+                "libpq-dev",
+                "libssl-dev",
+                "supervisor"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "git-deploy": {
+            "target": "/var/www/django",
+            "owner": "www-data",
+            "group": "www-data"
+        },
+        "django-base": {
+            "worker": true
+        },
+        "supervisor": {},
+        "elasticsearch-client": {},
+        "nginx": {},
+        "django-worker": {},
+        "memcache-client": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "interface:elasticsearch",
+        "interface:memcache",
+        "layer:git-deploy",
+        "layer:elasticsearch-client",
+        "layer:memcache-client",
+        "interface:redis",
+        "layer:django-base",
+        "layer:supervisor",
+        "interface:db-info"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-django-worker",
+    "is": "django-worker"
+}

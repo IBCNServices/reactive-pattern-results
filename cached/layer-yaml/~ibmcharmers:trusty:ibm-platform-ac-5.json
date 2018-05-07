@@ -1,0 +1,23 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "tar",
+                "mysql-client",
+                "nfs-kernel-server",
+                "unzip",
+                "rpm",
+                "expect"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-platform-ac": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-platform-ac/trunk/",
+    "includes": [
+        "layer:basic",
+        "interface:mysql-root"
+    ],
+    "is": "ibm-platform-ac"
+}

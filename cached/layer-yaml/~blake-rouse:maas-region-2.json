@@ -1,0 +1,21 @@
+{
+    "options": {
+        "maas-region": {},
+        "leadership": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:leadership",
+        "interface:maas-region-ha",
+        "interface:maas-rpc",
+        "interface:pgsql"
+    ],
+    "repo": "https://code.launchpad.net/~maas-committers/maas/maas-charms",
+    "is": "maas-region"
+}

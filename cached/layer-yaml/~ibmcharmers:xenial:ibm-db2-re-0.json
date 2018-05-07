@@ -1,0 +1,16 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-db2-re": {}
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "ibm-db2-re"
+}

@@ -1,0 +1,29 @@
+{
+    "options": {
+        "puppet-base": {
+            "puppet-srvc": "standalone"
+        },
+        "openvpn": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:IBCNServices/tengu-charms.git",
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:puppet-base",
+        "layer:metrics"
+    ],
+    "tactics": [
+        "tactics.download_modules.DownloadModulesTactic"
+    ],
+    "is": "openvpn"
+}

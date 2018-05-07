@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "docker.io"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "cka-ubuntu-cni": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:kubernetes-cni"
+    ],
+    "is": "cka-ubuntu-cni"
+}

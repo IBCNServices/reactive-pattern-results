@@ -1,0 +1,24 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:nginx",
+        "interface:http"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "autoconf",
+                "automake",
+                "make",
+                "gcc",
+                "supervisor",
+                "git"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "nginx": {},
+        "fiche": {}
+    },
+    "is": "fiche"
+}

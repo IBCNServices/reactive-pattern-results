@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:http"
+    ],
+    "is": "puppet-server"
+}

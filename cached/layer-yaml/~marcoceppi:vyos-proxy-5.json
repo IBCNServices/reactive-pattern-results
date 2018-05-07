@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python-dev",
+                "libffi-dev",
+                "libssl-dev"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "vyos-proxy": {}
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "vyos-proxy"
+}

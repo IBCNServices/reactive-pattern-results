@@ -1,0 +1,9 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:nodejs",
+        "layer:nginx",
+        "interface:mysql"
+    ],
+    "is": "ghost"
+}

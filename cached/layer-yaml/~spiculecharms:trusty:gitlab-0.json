@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "apt-transport-https"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "gitlab": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http"
+    ],
+    "is": "gitlab"
+}

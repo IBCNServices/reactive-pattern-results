@@ -1,0 +1,27 @@
+{
+    "options": {
+        "snap": {},
+        "submission-service": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:http",
+        "interface:pgsql"
+    ],
+    "repo": "https://git.launchpad.net/~hexr-dev/hexr/+git/submission-service",
+    "virtualenv": true,
+    "resources": {
+        "submission-service": {
+            "type": "file",
+            "filename": "submission-service.snap",
+            "description": "Submission Service snap"
+        }
+    },
+    "is": "submission-service"
+}

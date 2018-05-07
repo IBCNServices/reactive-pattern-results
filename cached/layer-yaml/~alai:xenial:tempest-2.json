@@ -1,0 +1,19 @@
+{
+    "options": {
+        "openstack": {},
+        "tempest": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:openstack",
+        "interface:keystone-admin"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "is": "tempest"
+}

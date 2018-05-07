@@ -1,0 +1,28 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-base",
+        "interface:gpfs"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "tar",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "ibm-spectrum-scale-manager": {},
+        "leadership": {},
+        "apt": {
+            "packages": []
+        }
+    },
+    "is": "ibm-spectrum-scale-manager"
+}

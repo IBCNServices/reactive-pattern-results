@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "unzip",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {},
+        "ibm-http": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-http/trunk/",
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:basic",
+        "layer:ibm-im",
+        "interface:was-ihs"
+    ],
+    "is": "ibm-http"
+}

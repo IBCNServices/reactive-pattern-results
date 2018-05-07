@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "node-exporter": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http"
+    ],
+    "ignore": [
+        ".*.swp"
+    ],
+    "is": "node-exporter"
+}

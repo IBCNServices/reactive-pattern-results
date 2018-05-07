@@ -1,0 +1,21 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "snap": {},
+        "prometheus-snmp-exporter": {}
+    },
+    "repo": "https://git.launchpad.net/prometheus-snmp-exporter-charm",
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "layer:snap"
+    ],
+    "ignore": [
+        ".*.swp"
+    ],
+    "is": "prometheus-snmp-exporter"
+}

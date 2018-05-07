@@ -1,0 +1,25 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:tls",
+        "layer:docker",
+        "layer:tls",
+        "interface:etcd",
+        "interface:consul"
+    ],
+    "repo": "https://github.com/chuckbutler/layer-swarm.git",
+    "options": {
+        "tls": {},
+        "swarm": {},
+        "docker": {
+            "skip-install": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "is": "swarm"
+}

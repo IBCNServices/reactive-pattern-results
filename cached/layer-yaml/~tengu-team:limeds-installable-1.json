@@ -1,0 +1,18 @@
+{
+    "options": {
+        "limeds-installable": {},
+        "limeds-sidecar": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:limeds",
+        "layer:limeds-sidecar"
+    ],
+    "repo": "git@github.com:IBCNServices/layer-limeds-installable.git",
+    "is": "limeds-installable"
+}

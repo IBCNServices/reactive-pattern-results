@@ -1,0 +1,23 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "tar",
+                "binutils"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-mobilefirst-server": {},
+        "ibm-im": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-mobilefirst-server/trunk/",
+    "includes": [
+        "layer:basic",
+        "layer:ibm-im",
+        "interface:db2",
+        "interface:http"
+    ],
+    "is": "ibm-mobilefirst-server"
+}

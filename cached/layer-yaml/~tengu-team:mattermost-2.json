@@ -1,0 +1,33 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full",
+                "python3-psycopg2"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "lets-encrypt": {
+            "service-name": "nginx"
+        },
+        "nginx": {},
+        "mattermost": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "layer:lets-encrypt",
+        "layer:metrics",
+        "interface:pgsql"
+    ],
+    "repo": "https://github.com/IBCNServices/layer-mattermost.git",
+    "is": "mattermost"
+}

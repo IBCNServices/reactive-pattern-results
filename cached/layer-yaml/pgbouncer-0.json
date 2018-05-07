@@ -1,0 +1,33 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "pgbouncer",
+                "postgresql-client",
+                "python3-psycopg2"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apt": {
+            "version_package": "pgbouncer",
+            "packages": [],
+            "full_version": false
+        },
+        "leadership": {},
+        "nagios": {},
+        "pgbouncer": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:nagios",
+        "interface:pgsql"
+    ],
+    "repo": "git+ssh://git.launchpad.net/~stub/+git/pgbouncer-charm",
+    "is": "pgbouncer"
+}

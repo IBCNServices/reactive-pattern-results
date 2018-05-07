@@ -1,0 +1,26 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ]
+        },
+        "uca-tracker": {},
+        "nginx": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:basic",
+        "layer:nginx",
+        "interface:http"
+    ],
+    "repo": "https://github.com/coreycb/uca-tracker",
+    "is": "uca-tracker"
+}

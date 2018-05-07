@@ -1,0 +1,63 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "cifs-utils",
+                "ceph-common",
+                "nfs-common",
+                "socat",
+                "virt-what"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "tls-client": {
+            "ca_certificate_path": "/root/cdk/ca.crt",
+            "server_certificate_path": "/root/cdk/server.crt",
+            "server_key_path": "/root/cdk/server.key",
+            "client_certificate_path": "/root/cdk/client.crt",
+            "client_key_path": "/root/cdk/client.key"
+        },
+        "nagios": {},
+        "nvidia-cuda": {},
+        "snap": {},
+        "debug": {},
+        "docker": {
+            "skip-install": false
+        },
+        "kubernetes-worker": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:debug",
+        "layer:nagios",
+        "interface:dockerhost",
+        "interface:sdn-plugin",
+        "interface:tls-certificates",
+        "layer:snap",
+        "layer:docker",
+        "layer:metrics",
+        "layer:tls-client",
+        "layer:nvidia-cuda",
+        "interface:http",
+        "interface:kubernetes-cni",
+        "interface:kube-dns",
+        "interface:kube-control"
+    ],
+    "repo": "https://github.com/kubernetes/kubernetes.git",
+    "exclude": [
+        "LAYER_README.md",
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "config": {
+        "deletes": [
+            "install_from_upstream"
+        ]
+    },
+    "is": "kubernetes-worker"
+}

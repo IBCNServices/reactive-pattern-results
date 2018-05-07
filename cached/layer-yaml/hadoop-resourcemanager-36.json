@@ -1,0 +1,76 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "mapred",
+                "spark"
+            ],
+            "users": {
+                "spark": {
+                    "groups": [
+                        "spark",
+                        "hadoop"
+                    ]
+                },
+                "ubuntu": {
+                    "groups": [
+                        "hadoop",
+                        "mapred",
+                        "spark"
+                    ]
+                }
+            },
+            "ports": {
+                "resourcemanager": {
+                    "port": 8032
+                },
+                "rm_webapp_http": {
+                    "port": 8088,
+                    "exposed_on": "resourcemanager"
+                },
+                "jobhistory": {
+                    "port": 10020
+                },
+                "jh_webapp_http": {
+                    "port": 19888,
+                    "exposed_on": "resourcemanager"
+                }
+            },
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "nvidia-cuda": {},
+        "hadoop-resourcemanager": {}
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/hadoop/layer-hadoop-resourcemanager",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "interface:dfs",
+        "interface:mapred",
+        "interface:mapred-slave",
+        "interface:benchmark"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "hadoop-resourcemanager"
+}

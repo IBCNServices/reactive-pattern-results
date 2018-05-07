@@ -1,0 +1,33 @@
+{
+    "options": {
+        "storpool-common": {},
+        "storpool-block": {},
+        "storpool-repo-add": {},
+        "storpool-config": {},
+        "storpool-openstack-integration": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "storpool-helper": {},
+        "storpool-beacon": {}
+    },
+    "repo": "https://github.com/storpool/charm-storpool-block.git",
+    "includes": [
+        "layer:basic",
+        "layer:storpool-helper",
+        "layer:storpool-repo-add",
+        "layer:storpool-config",
+        "layer:storpool-common",
+        "layer:storpool-beacon",
+        "layer:storpool-block",
+        "layer:storpool-openstack-integration",
+        "interface:storpool-service",
+        "interface:storpool-presence"
+    ],
+    "exclude": [
+        "unit_tests"
+    ],
+    "is": "storpool-block"
+}

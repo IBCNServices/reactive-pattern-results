@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "apt-transport-https"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "gitlab-server": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http"
+    ],
+    "repo": "git@github.com:OSBI/layer-gitlab.git",
+    "is": "gitlab-server"
+}

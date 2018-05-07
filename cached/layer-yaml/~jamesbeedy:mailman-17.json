@@ -1,0 +1,43 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "basic": {
+            "packages": [
+                "gunicorn",
+                "ruby-full",
+                "gettext",
+                "gcc",
+                "virtualenv",
+                "python-dev",
+                "python-all",
+                "python3-dev",
+                "python3-all"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "postfix": {
+            "mailname": "lists.example.com"
+        },
+        "nginx": {},
+        "mailman": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:postfix",
+        "layer:nginx",
+        "interface:elasticsearch",
+        "interface:pgsql",
+        "interface:mysql-shared"
+    ],
+    "repo": "http://github.com/jamesbeedy/charm-mailman.git",
+    "is": "mailman"
+}

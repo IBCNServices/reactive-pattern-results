@@ -1,0 +1,34 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "autoconf",
+                "automake",
+                "make",
+                "gcc",
+                "git"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "git-deploy": {
+            "target": "/srv/presentation",
+            "owner": "www-data",
+            "group": "www-data"
+        },
+        "nginx": {},
+        "present": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:http",
+        "layer:basic",
+        "layer:git-deploy",
+        "layer:nginx",
+        "interface:http"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-present.git",
+    "is": "present"
+}

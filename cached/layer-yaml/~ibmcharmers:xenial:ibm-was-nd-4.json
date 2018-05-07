@@ -1,0 +1,31 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "unzip",
+                "pwgen"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {},
+        "apt": {
+            "packages": [],
+            "version_package": "",
+            "full_version": false
+        },
+        "leadership": {},
+        "ibm-base": {},
+        "ibm-was-nd": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:ibm-base",
+        "layer:ibm-im"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/xenial/layer-ibm-was-nd/trunk/",
+    "is": "ibm-was-nd"
+}

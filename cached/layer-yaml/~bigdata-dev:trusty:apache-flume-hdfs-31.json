@@ -1,0 +1,28 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "layer:apache-flume-base",
+        "layer:hadoop-client",
+        "interface:flume-agent"
+    ],
+    "options": {
+        "apache-flume-hdfs": {},
+        "apache-flume-base": {},
+        "hadoop-client": {
+            "dirs": {},
+            "packages": [],
+            "users": {},
+            "groups": [],
+            "ports": {}
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-flume-hdfs.git",
+    "is": "apache-flume-hdfs"
+}

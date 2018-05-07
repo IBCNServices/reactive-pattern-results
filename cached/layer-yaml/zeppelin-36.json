@@ -1,0 +1,86 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "hadoop",
+                "zeppelin"
+            ],
+            "users": {
+                "ubuntu": {
+                    "groups": [
+                        "hadoop",
+                        "zeppelin"
+                    ]
+                }
+            },
+            "dirs": {
+                "zeppelin": {
+                    "path": "/usr/lib/zeppelin"
+                },
+                "zeppelin_conf": {
+                    "path": "/etc/zeppelin/conf"
+                },
+                "zeppelin_logs": {
+                    "path": "/var/log/zeppelin"
+                },
+                "zeppelin_notebooks": {
+                    "path": "/var/lib/zeppelin/notebook"
+                }
+            },
+            "ports": {
+                "zeppelin": {
+                    "port": 9080,
+                    "exposed_on": "zeppelin"
+                },
+                "zeppelin_websocket": {
+                    "port": 9081,
+                    "exposed_on": "zeppelin"
+                }
+            },
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "nvidia-cuda": {},
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        },
+        "zeppelin": {}
+    },
+    "repo": "git@github.com:juju-solutions/bigtop.git",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "interface:hadoop-plugin",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client",
+        "interface:hive",
+        "interface:spark",
+        "interface:zeppelin"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "zeppelin"
+}

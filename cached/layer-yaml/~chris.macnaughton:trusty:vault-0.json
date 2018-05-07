@@ -1,0 +1,19 @@
+{
+    "options": {
+        "vault": {},
+        "leadership": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:leadership",
+        "interface:consul",
+        "interface:vault"
+    ],
+    "is": "vault"
+}

@@ -1,0 +1,20 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:hadoop-base",
+        "interface:hadoop-plugin",
+        "interface:dfs",
+        "interface:mapred"
+    ],
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "hadoop-base": {},
+        "apache-hadoop-plugin": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-hadoop-plugin.git",
+    "is": "apache-hadoop-plugin"
+}

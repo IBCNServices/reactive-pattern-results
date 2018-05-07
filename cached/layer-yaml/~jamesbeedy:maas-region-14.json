@@ -1,0 +1,29 @@
+{
+    "options": {
+        "snap": {
+            "maas": {
+                "channel": "stable",
+                "devmode": false,
+                "jailmode": false,
+                "dangerous": false,
+                "classic": true,
+                "revision": null
+            }
+        },
+        "maas-region": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:pgsql",
+        "interface:maas",
+        "interface:http"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-maas-region",
+    "is": "maas-region"
+}

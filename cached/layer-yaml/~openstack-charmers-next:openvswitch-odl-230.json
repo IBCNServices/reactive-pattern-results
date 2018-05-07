@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack": {},
+        "openvswitch-odl": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "interface:neutron-plugin",
+        "interface:ovsdb-manager",
+        "interface:odl-controller-api"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "is": "openvswitch-odl"
+}

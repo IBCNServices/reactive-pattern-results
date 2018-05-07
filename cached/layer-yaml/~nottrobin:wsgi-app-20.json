@@ -1,0 +1,19 @@
+{
+    "options": {
+        "wsgi": {},
+        "wsgi-app": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "layer:wsgi",
+        "layer:untar-resources"
+    ],
+    "repo": "git@github.com:canonical-webteam/wsgi-app.git",
+    "is": "wsgi-app"
+}

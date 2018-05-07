@@ -1,0 +1,39 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ]
+        },
+        "basic": {
+            "packages": [
+                "git",
+                "autoconf",
+                "automake",
+                "make",
+                "gcc"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "git-deploy": {
+            "target": "/srv/fiche",
+            "owner": "www-data",
+            "group": "www-data"
+        },
+        "nginx": {},
+        "fiche": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:basic",
+        "layer:basic",
+        "layer:nginx",
+        "layer:git-deploy",
+        "interface:http"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-fiche",
+    "is": "fiche"
+}

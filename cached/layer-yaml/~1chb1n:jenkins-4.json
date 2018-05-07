@@ -1,0 +1,34 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-testtools",
+                "pwgen"
+            ],
+            "include_system_packages": true,
+            "use_venv": false
+        },
+        "jenkins": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "interface:jenkins-slave",
+        "interface:jenkins-extension",
+        "interface:jenkins-zuul",
+        "interface:nrpe-external-master"
+    ],
+    "exclude": [
+        "gen-repo-info.sh",
+        "developer-test-push.sh",
+        "build-requirements.txt"
+    ],
+    "repo": "https://github.com/freeekanayaka/layer-jenkins.git",
+    "is": "jenkins"
+}

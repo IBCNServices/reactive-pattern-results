@@ -1,0 +1,40 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "tls-client": {
+            "ca_certificate_path": "/srv/kubernetes/ca.crt",
+            "server_certificate_path": "/srv/kubernetes/server.crt",
+            "server_key_path": "/srv/kubernetes/server.key",
+            "client_certificate_path": "/srv/kubernetes/client.crt",
+            "client_key_path": "/srv/kubernetes/client.key"
+        },
+        "kubeapi-load-balancer": {},
+        "nagios": {},
+        "nginx": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "https://github.com/kubernetes/kubernetes.git",
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:apt",
+        "interface:http",
+        "interface:tls-certificates",
+        "layer:metrics",
+        "layer:nagios",
+        "layer:nginx",
+        "layer:tls-client",
+        "interface:public-address"
+    ],
+    "is": "kubeapi-load-balancer"
+}

@@ -1,0 +1,22 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "python-apport",
+                "python-yaml",
+                "jq"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "cwr": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:jenkins-extension",
+        "interface:cwr-ci"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-cwr.git",
+    "is": "cwr"
+}

@@ -1,0 +1,24 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "python3-pip"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "jupyter-notebook": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http"
+    ],
+    "repo": "git@github.com/IBCNServices/layer-jupyter-notebook.git",
+    "is": "jupyter-notebook"
+}

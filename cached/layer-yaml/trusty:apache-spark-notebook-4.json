@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [
+                "ipython",
+                "ipython-notebook"
+            ],
+            "include_system_packages": false
+        },
+        "apache-spark-notebook": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-spark-notebook.git",
+    "includes": [
+        "layer:basic",
+        "interface:spark"
+    ],
+    "is": "apache-spark-notebook"
+}

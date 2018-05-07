@@ -1,0 +1,15 @@
+{
+    "options": {
+        "tensorflow": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "https://github.com/johnsca/charm-tensorflow",
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "tensorflow"
+}

@@ -1,0 +1,28 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        },
+        "joshua-full": {}
+    },
+    "repo": "https://github.com/buggtb/incubator-joshua.git",
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:basic",
+        "interface:java",
+        "layer:hadoop-client"
+    ],
+    "is": "joshua-full"
+}

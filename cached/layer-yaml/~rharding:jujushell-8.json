@@ -1,0 +1,29 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python-yaml",
+                "python3",
+                "python3-pylxd"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "snap": {},
+        "jujushell": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:snap",
+        "interface:http",
+        "interface:prometheus"
+    ],
+    "repo": "https://github.com/juju/jujushell-charm",
+    "is": "jujushell"
+}

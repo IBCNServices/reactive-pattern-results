@@ -1,0 +1,29 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack-principle": {},
+        "openstack": {},
+        "openstack-api": {},
+        "gnocchi": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "layer:openstack-principle",
+        "interface:mysql-shared",
+        "interface:rabbitmq",
+        "interface:keystone",
+        "interface:hacluster",
+        "interface:openstack-ha",
+        "layer:openstack-api",
+        "interface:ceph-client",
+        "interface:gnocchi",
+        "interface:memcache"
+    ],
+    "repo": "https://github.com/openstack/charm-gnocchi",
+    "is": "gnocchi"
+}

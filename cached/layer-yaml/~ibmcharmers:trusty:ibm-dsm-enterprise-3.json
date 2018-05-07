@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "layer-ibm-dsm": {},
+        "ibm-dsm-enterprise": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:layer-ibm-dsm",
+        "interface:db2"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-dsm-enterprise/trunk/",
+    "is": "ibm-dsm-enterprise"
+}

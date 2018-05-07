@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "hostname": {},
+        "version": {},
+        "plex": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:hostname",
+        "layer:version"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-plex.git",
+    "is": "plex"
+}

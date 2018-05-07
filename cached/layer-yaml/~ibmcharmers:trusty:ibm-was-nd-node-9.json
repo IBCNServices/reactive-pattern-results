@@ -1,0 +1,32 @@
+{
+    "includes": [
+        "layer:ibm-im",
+        "layer:ibm-base",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-was-nd",
+        "interface:dm-node"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "pwgen",
+                "unzip",
+                "curl"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {},
+        "apt": {
+            "packages": []
+        },
+        "leadership": {},
+        "ibm-base": {},
+        "ibm-was-nd-node": {},
+        "ibm-was-nd": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-im/trunk/",
+    "is": "ibm-was-nd-node"
+}

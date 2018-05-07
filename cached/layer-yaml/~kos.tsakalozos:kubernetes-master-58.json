@@ -1,0 +1,48 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "socat"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "tls-client": {
+            "ca_certificate_path": "/root/cdk/ca.crt",
+            "server_certificate_path": "/root/cdk/server.crt",
+            "server_key_path": "/root/cdk/server.key",
+            "client_certificate_path": "/root/cdk/client.crt",
+            "client_key_path": "/root/cdk/client.key"
+        },
+        "kubernetes-master": {},
+        "nagios": {},
+        "debug": {},
+        "leadership": {},
+        "snap": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:tls-certificates",
+        "layer:basic",
+        "layer:basic",
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:basic",
+        "layer:snap",
+        "layer:tls-client",
+        "layer:leadership",
+        "layer:debug",
+        "layer:metrics",
+        "layer:nagios",
+        "interface:ceph-admin",
+        "interface:etcd",
+        "interface:http",
+        "interface:kubernetes-cni",
+        "interface:kube-dns",
+        "interface:kube-control",
+        "interface:public-address"
+    ],
+    "repo": "https://github.com/kubernetes/kubernetes.git",
+    "is": "kubernetes-master"
+}

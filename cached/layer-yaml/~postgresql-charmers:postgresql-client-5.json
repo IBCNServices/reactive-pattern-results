@@ -1,0 +1,26 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "use_system_packages": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "apt": {
+            "packages": [
+                "language-pack-en",
+                "postgresql-client"
+            ],
+            "version_package": "postgresql-client",
+            "full_version": false
+        },
+        "postgresql-client": {}
+    },
+    "repo": "git+ssh://git.launchpad.net/~stub/+git/postgresql-client",
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:pgsql"
+    ],
+    "is": "postgresql-client"
+}

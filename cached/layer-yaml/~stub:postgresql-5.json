@@ -1,0 +1,27 @@
+{
+    "options": {
+        "coordinator": {
+            "class": "charms.coordinator.SimpleCoordinator",
+            "log_level": "debug"
+        },
+        "basic": {
+            "packages": [
+                "python3-psycopg2"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "leadership": {},
+        "postgresql": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:coordinator"
+    ],
+    "repo": "git+ssh://git.launchpad.net/postgresql-charm",
+    "is": "postgresql"
+}

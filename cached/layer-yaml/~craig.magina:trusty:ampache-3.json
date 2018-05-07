@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:mysql"
+    ],
+    "is": "ampache"
+}

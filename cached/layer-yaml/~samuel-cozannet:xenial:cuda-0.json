@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "build-essential",
+                "software-properties-common"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "cuda": {}
+    },
+    "repo": "git@github.com:SaMnCo/layer-nvidia-cuda",
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "cuda"
+}

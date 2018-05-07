@@ -1,0 +1,27 @@
+{
+    "options": {
+        "snap": {
+            "maas": {
+                "channel": "stable",
+                "devmode": false,
+                "jailmode": false,
+                "dangerous": false,
+                "classic": true,
+                "revision": null
+            }
+        },
+        "maas-rack": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:maas"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-maas-rack",
+    "is": "maas-rack"
+}

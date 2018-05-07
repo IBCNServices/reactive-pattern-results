@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "rpm",
+                "bc"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-mq": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/ibmlayers/layer-ibm-mq/",
+    "includes": [
+        "layer:basic",
+        "interface:ibm-mq"
+    ],
+    "is": "ibm-mq"
+}

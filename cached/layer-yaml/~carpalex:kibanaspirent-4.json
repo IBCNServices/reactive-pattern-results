@@ -1,0 +1,9 @@
+{
+    "includes": [
+        "cs:kibana"
+    ],
+    "options": {
+        "kibanaspirent": {}
+    },
+    "is": "kibanaspirent"
+}

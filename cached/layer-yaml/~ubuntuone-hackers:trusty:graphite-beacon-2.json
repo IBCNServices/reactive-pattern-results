@@ -1,0 +1,16 @@
+{
+    "options": {
+        "graphite-beacon": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "interface:conn-check"
+    ],
+    "is": "graphite-beacon"
+}

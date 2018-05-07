@@ -1,0 +1,61 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "libreadline-dev",
+                "libssl-dev",
+                "libgmp-dev",
+                "libffi-dev",
+                "libyaml-dev",
+                "libxslt-dev",
+                "zlib1g-dev",
+                "libgdbm-dev",
+                "openssl",
+                "libicu-dev",
+                "cmake",
+                "pkg-config",
+                "libxml2-dev",
+                "libncurses5-dev",
+                "git",
+                "imagemagick",
+                "optipng",
+                "jhead",
+                "jpegoptim",
+                "libjpeg-turbo-progs",
+                "gifsicle",
+                "libpq-dev",
+                "redis-server",
+                "ruby-bundler",
+                "ruby-dev",
+                "python3-psutil",
+                "postfix",
+                "postgresql-client-common",
+                "postgresql-client-9.5"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "git-deploy": {
+            "target": "/srv/discourse",
+            "owner": "www-data",
+            "group": "www-data"
+        },
+        "discourse": {},
+        "ruby": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:ruby",
+        "layer:git-deploy",
+        "interface:pgsql",
+        "interface:redis",
+        "interface:http",
+        "interface:nrpe-external-master"
+    ],
+    "tactics": [
+        "tactics.ruby.DependenciesTxtTactic"
+    ],
+    "repo": "https://git.launchpad.net/discourse-charm",
+    "is": "discourse"
+}

@@ -1,0 +1,26 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "topbeat": {},
+        "beats-base": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:elastic-beats",
+        "interface:elasticsearch",
+        "interface:kafka",
+        "layer:beats-base"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-topbeat.git",
+    "is": "topbeat"
+}

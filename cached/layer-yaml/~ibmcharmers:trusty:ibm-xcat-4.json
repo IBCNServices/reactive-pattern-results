@@ -1,0 +1,28 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:ibm-base"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "libssl-dev",
+                "libffi-dev",
+                "python-dev"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "ibm-xcat": {
+            "xcat_domain": "mydomain.org"
+        },
+        "leadership": {},
+        "apt": {
+            "packages": []
+        }
+    },
+    "is": "ibm-xcat"
+}

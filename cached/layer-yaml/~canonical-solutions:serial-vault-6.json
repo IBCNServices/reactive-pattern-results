@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "serial-vault": {},
+        "nagios": {}
+    },
+    "repo": "https://github.com/ubuntu-core/serial-vault-charm.git",
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:nagios",
+        "interface:pgsql",
+        "interface:http"
+    ],
+    "is": "serial-vault"
+}

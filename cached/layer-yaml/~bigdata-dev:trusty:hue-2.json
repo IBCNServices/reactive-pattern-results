@@ -1,0 +1,85 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "ant",
+                "g++",
+                "libsasl2-modules-gssapi-mit",
+                "libtidy-0.99-0",
+                "python2.7-dev",
+                "maven",
+                "python-dev",
+                "python-simplejson",
+                "python-setuptools",
+                "make",
+                "libsasl2-dev",
+                "libmysqlclient-dev",
+                "libkrb5-dev",
+                "libxml2-dev",
+                "libxslt-dev",
+                "libxslt1-dev",
+                "libsqlite3-dev",
+                "libssl-dev",
+                "libldap2-dev",
+                "python-pip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "hadoop-client": {
+            "hadoop_version": "2.7.1",
+            "groups": [
+                "hadoop"
+            ],
+            "users": {
+                "hue": {
+                    "groups": [
+                        "hadoop"
+                    ]
+                }
+            },
+            "dirs": {
+                "hadoop": {
+                    "path": "/usr/lib/hadoop",
+                    "perms": 511
+                },
+                "hue": {
+                    "path": "/usr/lib/hue",
+                    "owner": "hue",
+                    "group": "hadoop"
+                },
+                "hue_log": {
+                    "path": "/var/log/hue/",
+                    "owner": "hue",
+                    "group": "hadoop"
+                },
+                "outputdir": {
+                    "path": "/hue/work"
+                },
+                "hue_conf": {
+                    "path": "/etc/hue/conf"
+                }
+            },
+            "ports": {
+                "hue_web": {
+                    "port": 8888,
+                    "exposed_on": "hue"
+                }
+            },
+            "packages": [],
+            "silent": false
+        },
+        "hue": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-hue.git",
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:basic",
+        "layer:hadoop-client",
+        "interface:hive",
+        "interface:zookeeper"
+    ],
+    "is": "hue"
+}

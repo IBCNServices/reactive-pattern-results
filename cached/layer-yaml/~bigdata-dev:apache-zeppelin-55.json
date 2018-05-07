@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "apache-zeppelin": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-zeppelin.git",
+    "includes": [
+        "layer:basic",
+        "interface:spark",
+        "interface:zeppelin"
+    ],
+    "is": "apache-zeppelin"
+}

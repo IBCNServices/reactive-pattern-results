@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "flannel": {}
+    },
+    "includes": [
+        "interface:etcd",
+        "interface:kubernetes-cni",
+        "interface:nrpe-external-master",
+        "layer:basic"
+    ],
+    "repo": "https://github.com/juju-solutions/charm-flannel.git",
+    "is": "flannel"
+}

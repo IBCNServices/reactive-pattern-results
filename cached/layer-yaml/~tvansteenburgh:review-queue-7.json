@@ -1,0 +1,22 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "make",
+                "python",
+                "python-virtualenv"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "review-queue": {}
+    },
+    "repo": "https://github.com/juju-solutions/review-queue-charm.git",
+    "includes": [
+        "layer:basic",
+        "interface:pgsql",
+        "interface:http",
+        "interface:rabbitmq"
+    ],
+    "is": "review-queue"
+}

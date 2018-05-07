@@ -1,0 +1,24 @@
+{
+    "options": {
+        "ceph-base": {},
+        "ceph-fs": {},
+        "apt": {
+            "packages": []
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:nrpe-external-master",
+        "layer:apt",
+        "layer:ceph-base",
+        "interface:/home/chris/repos/juju-interface-ceph-mds"
+    ],
+    "repo": "git@github.com:cholcombe973/charm-ceph-fs.git",
+    "is": "ceph-fs"
+}

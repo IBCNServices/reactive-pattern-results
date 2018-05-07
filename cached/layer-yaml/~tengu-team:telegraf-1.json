@@ -1,0 +1,19 @@
+{
+    "options": {
+        "telegraf": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:influxdb-api",
+        "interface:mongodb",
+        "interface:mysql",
+        "interface:juju-info"
+    ],
+    "repo": "https://github.com/tengu-team/layer-telegraf.git",
+    "is": "telegraf"
+}

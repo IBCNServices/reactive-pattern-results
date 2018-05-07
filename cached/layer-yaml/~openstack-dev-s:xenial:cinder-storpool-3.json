@@ -1,0 +1,31 @@
+{
+    "options": {
+        "storpool-common": {},
+        "storpool-repo-add": {},
+        "storpool-config": {},
+        "cinder-storpool": {},
+        "storpool-openstack-integration": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "storpool-helper": {}
+    },
+    "repo": "https://github.com/storpool/charm-cinder-storpool.git",
+    "includes": [
+        "layer:basic",
+        "layer:storpool-helper",
+        "layer:storpool-repo-add",
+        "layer:storpool-config",
+        "layer:storpool-common",
+        "layer:storpool-openstack-integration",
+        "interface:storpool-presence",
+        "interface:storpool-service",
+        "interface:cinder-backend"
+    ],
+    "exclude": [
+        "unit_tests"
+    ],
+    "is": "cinder-storpool"
+}

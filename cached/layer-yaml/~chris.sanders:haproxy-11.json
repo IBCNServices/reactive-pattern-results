@@ -1,0 +1,28 @@
+{
+    "options": {
+        "haproxy": {},
+        "hostname": {},
+        "letsencrypt": {
+            "pre-hook": "",
+            "port": 9999,
+            "post-hook": ""
+        },
+        "version": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "upnp": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:version",
+        "layer:hostname",
+        "layer:upnp",
+        "interface:reverseproxy",
+        "layer:letsencrypt"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-haproxy.git",
+    "is": "haproxy"
+}

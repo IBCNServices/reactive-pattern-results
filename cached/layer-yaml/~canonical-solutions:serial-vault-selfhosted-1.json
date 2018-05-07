@@ -1,0 +1,30 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "golang-go",
+                "git",
+                "bzr"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "serial-vault-selfhosted": {},
+        "nagios": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "repo": "https://github.com/CanonicalLtd/serial-vault-selfhosted.git",
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:apt",
+        "layer:nagios",
+        "interface:pgsql",
+        "interface:http"
+    ],
+    "is": "serial-vault-selfhosted"
+}

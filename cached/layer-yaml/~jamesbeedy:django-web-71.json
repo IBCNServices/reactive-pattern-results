@@ -1,0 +1,54 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "python3-venv",
+                "python3-pip",
+                "python3-all",
+                "libpq-dev",
+                "libssl-dev"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "git-deploy": {
+            "target": "/var/www/django",
+            "owner": "www-data",
+            "group": "www-data"
+        },
+        "django-web": {},
+        "django-base": {
+            "worker": false
+        },
+        "elasticsearch-client": {},
+        "nginx": {},
+        "leadership": {},
+        "memcache-client": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "interface:elasticsearch",
+        "interface:memcache",
+        "layer:git-deploy",
+        "layer:elasticsearch-client",
+        "layer:memcache-client",
+        "interface:redis",
+        "layer:django-base",
+        "layer:leadership",
+        "interface:pgsql",
+        "interface:db-info"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-django-web",
+    "is": "django-web"
+}

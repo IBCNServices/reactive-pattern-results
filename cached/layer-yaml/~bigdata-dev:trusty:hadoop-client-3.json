@@ -1,0 +1,22 @@
+{
+    "options": {
+        "hadoop-client": {
+            "dirs": {},
+            "packages": [],
+            "users": {},
+            "groups": [],
+            "ports": {}
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-hadoop-client.git",
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin"
+    ],
+    "is": "hadoop-client"
+}

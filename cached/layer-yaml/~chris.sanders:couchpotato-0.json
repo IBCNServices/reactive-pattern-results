@@ -1,0 +1,27 @@
+{
+    "options": {
+        "backup": {
+            "backup-name": "couchpotato",
+            "backup-files": "/home/{couch-user}/.couchpotato/settings.conf /home/{couch-user}/.couchpotato/database"
+        },
+        "couchpotato": {},
+        "version": {},
+        "hostname": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:version",
+        "layer:hostname",
+        "interface:usenet-downloader",
+        "interface:plex-info",
+        "interface:reverseproxy",
+        "layer:backup"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-couchpotato.git",
+    "is": "couchpotato"
+}

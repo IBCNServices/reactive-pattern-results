@@ -1,0 +1,17 @@
+{
+    "options": {
+        "ovn": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:kubernetes-cni",
+        "interface:master-config"
+    ],
+    "repo": "https://github.com/AakashKT/charm-ovn.git",
+    "is": "ovn"
+}

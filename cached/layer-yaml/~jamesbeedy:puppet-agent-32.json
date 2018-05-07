@@ -1,0 +1,15 @@
+{
+    "options": {
+        "puppet-agent": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-puppet-agent.git",
+    "is": "puppet-agent"
+}

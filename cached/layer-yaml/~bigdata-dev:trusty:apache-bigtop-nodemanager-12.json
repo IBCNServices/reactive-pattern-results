@@ -1,0 +1,45 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:puppet",
+        "layer:basic",
+        "layer:apt",
+        "layer:apache-bigtop-base",
+        "interface:mapred-slave"
+    ],
+    "options": {
+        "apache-bigtop-base": {
+            "users": {
+                "ubuntu": {
+                    "groups": [
+                        "hadoop"
+                    ]
+                }
+            },
+            "ports": {
+                "nm_webapp_http": {
+                    "port": 8042,
+                    "exposed_on": "nodemanager"
+                }
+            },
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "bigtop-1.1.0",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_repo-x86_64": "http://bigtop-repos.s3.amazonaws.com/releases/1.1.0/ubuntu/trusty/x86_64",
+            "bigtop_repo-ppc64el": "http://bigtop-repos.s3.amazonaws.com/releases/1.1.0/ubuntu/vivid/ppc64el",
+            "bigtop_hiera_path": "/etc/puppet/hiera.yaml",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml",
+            "java_package_name": "default-jre-headless"
+        },
+        "puppet": {},
+        "apache-bigtop-nodemanager": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-bigtop-nodemanager.git",
+    "is": "apache-bigtop-nodemanager"
+}

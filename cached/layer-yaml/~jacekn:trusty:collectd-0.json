@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master"
+    ],
+    "is": "collectd"
+}

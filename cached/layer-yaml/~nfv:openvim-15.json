@@ -1,0 +1,35 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "screen",
+                "wget",
+                "mysql-client",
+                "python3-git",
+                "python-yaml",
+                "python-libvirt",
+                "python-bottle",
+                "python-mysqldb",
+                "python-jsonschema",
+                "python-paramiko",
+                "python-argcomplete",
+                "python-requests",
+                "python-novaclient",
+                "python-keystoneclient",
+                "python-glanceclient",
+                "python-neutronclient"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "openvim": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:mysql",
+        "interface:openvim-compute",
+        "interface:openvim"
+    ],
+    "is": "openvim"
+}

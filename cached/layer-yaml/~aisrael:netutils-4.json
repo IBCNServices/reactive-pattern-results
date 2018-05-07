@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "traceroute",
+                "nmap"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "netutils": {}
+    },
+    "repo": "git@github.com:AdamIsrael/layer-netutils.git",
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "netutils"
+}

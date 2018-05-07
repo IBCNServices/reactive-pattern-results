@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack": {},
+        "cinder-netapp": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "is": "cinder-netapp"
+}

@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "tar",
+                "wget"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-platform-pm": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-platform-pm/trunk/",
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "ibm-platform-pm"
+}

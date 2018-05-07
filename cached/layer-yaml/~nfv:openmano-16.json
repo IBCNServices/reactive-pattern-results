@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python-yaml",
+                "python-bottle",
+                "python-mysqldb",
+                "python-jsonschema",
+                "python-paramiko",
+                "python-argcomplete",
+                "python-requests",
+                "python3-git",
+                "mariadb-client"
+            ]
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:mysql",
+        "interface:openvim",
+        "interface:http"
+    ],
+    "is": "openmano"
+}

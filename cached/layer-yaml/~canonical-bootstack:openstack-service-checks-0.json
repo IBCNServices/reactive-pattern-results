@@ -1,0 +1,11 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "interface:keystone-credentials"
+    ],
+    "ignore": [
+        ".*.swp"
+    ],
+    "repo": "lp:~canonical-bootstack/+git/charm-openstack-service-checks"
+}

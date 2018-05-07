@@ -1,0 +1,20 @@
+{
+    "includes": [
+        "layer:ibm-base",
+        "interface:nfsstorage"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "rpm",
+                "nfs-kernel-server"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {},
+        "ibm-platform-symphony-storage": {}
+    },
+    "is": "ibm-platform-symphony-storage"
+}

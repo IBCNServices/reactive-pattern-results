@@ -1,0 +1,19 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:docker"
+    ],
+    "repo": "https://code.launchpad.net/~brianlbaird/charms/trusty/qfabric/trunk",
+    "options": {
+        "qfabric": {},
+        "docker": {
+            "skip-install": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "is": "qfabric"
+}

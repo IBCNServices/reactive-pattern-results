@@ -1,0 +1,29 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "php-fpm",
+                "php-mysql",
+                "php-curl",
+                "php-gd",
+                "php-mbstring",
+                "php-mcrypt",
+                "php-xml",
+                "php-xmlrpc"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "nginx": {},
+        "wordpress": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "layer:basic",
+        "layer:nginx",
+        "interface:mysql"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-wordpress.git",
+    "is": "wordpress"
+}

@@ -1,0 +1,49 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "nfs-common",
+                "ceph-common",
+                "socat"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "tls-client": {
+            "ca_certificate_path": "/srv/kubernetes/ca.crt",
+            "server_certificate_path": "/srv/kubernetes/server.crt",
+            "server_key_path": "/srv/kubernetes/server.key",
+            "client_certificate_path": "/srv/kubernetes/client.crt",
+            "client_key_path": "/srv/kubernetes/client.key"
+        },
+        "debug": {},
+        "docker": {
+            "skip-install": false
+        },
+        "kubernetes-worker": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:debug",
+        "interface:dockerhost",
+        "interface:nrpe-external-master",
+        "interface:sdn-plugin",
+        "layer:basic",
+        "interface:tls-certificates",
+        "layer:basic",
+        "layer:docker",
+        "layer:tls-client",
+        "layer:debug",
+        "interface:http",
+        "interface:kubernetes-cni",
+        "interface:kube-dns"
+    ],
+    "repo": "https://github.com/kubernetes/kubernetes.git",
+    "exclude": [
+        "LAYER_README.md",
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "kubernetes-worker"
+}

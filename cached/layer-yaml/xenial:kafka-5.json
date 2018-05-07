@@ -1,0 +1,53 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "kafka"
+            ],
+            "users": {
+                "kafka": {
+                    "groups": [
+                        "kafka"
+                    ]
+                }
+            },
+            "ports": {
+                "kafka": {
+                    "port": 9092,
+                    "exposed_on": "kafka"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "1.1.0",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_repo_url": "http://bigtop-repos.s3.amazonaws.com/releases/{version}/{dist}/{series}/{arch}",
+            "bigtop_global_hiera": "/etc/puppet/hiera.yaml",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml"
+        },
+        "kafka": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "interface:zookeeper",
+        "interface:kafka"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "repo": "git@github.com:juju-solutions/layer-apache-bigtop-kafka.git",
+    "is": "kafka"
+}

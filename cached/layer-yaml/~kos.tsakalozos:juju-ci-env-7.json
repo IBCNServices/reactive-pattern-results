@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "juju-ci-env": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:jenkins-extension",
+        "interface:charms-ci"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-juju-ci-env.git",
+    "is": "juju-ci-env"
+}

@@ -1,0 +1,27 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "nginx": {},
+        "documize": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "interface:mysql-shared"
+    ],
+    "repo": "https://github.com/creativedrive/charms",
+    "is": "documize"
+}

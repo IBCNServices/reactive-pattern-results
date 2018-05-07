@@ -1,0 +1,83 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip",
+                "libmysql-java",
+                "mysql-client"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "hadoop",
+                "hive"
+            ],
+            "users": {
+                "ubuntu": {
+                    "groups": [
+                        "hadoop",
+                        "hive"
+                    ]
+                }
+            },
+            "dirs": {
+                "hive": {
+                    "path": "/usr/lib/hive"
+                },
+                "hive_conf": {
+                    "path": "/etc/hive/conf"
+                }
+            },
+            "ports": {
+                "hive-thrift": {
+                    "port": 10000,
+                    "exposed_on": "hive"
+                },
+                "hive-thrift-web": {
+                    "port": 10001,
+                    "exposed_on": "hive"
+                }
+            },
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "nvidia-cuda": {},
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        },
+        "hive": {}
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/hive/layer-hive",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "interface:hadoop-plugin",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client",
+        "interface:hbase",
+        "interface:hive",
+        "interface:mysql",
+        "interface:zookeeper"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "hive"
+}

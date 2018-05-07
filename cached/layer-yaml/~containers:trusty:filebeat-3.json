@@ -1,0 +1,18 @@
+{
+    "options": {
+        "filebeat": {},
+        "beats-base": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:elastic-beats",
+        "interface:elasticsearch",
+        "layer:beats-base"
+    ],
+    "is": "filebeat"
+}

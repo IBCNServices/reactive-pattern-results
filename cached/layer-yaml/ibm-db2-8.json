@@ -1,0 +1,37 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "curl",
+                "binutils",
+                "pwgen",
+                "tar"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {},
+        "ibm-db2": {},
+        "apt": {
+            "packages": [],
+            "version_package": "",
+            "full_version": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-base",
+        "interface:db2"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/xenial/ibm-db2/trunk/",
+    "is": "ibm-db2"
+}

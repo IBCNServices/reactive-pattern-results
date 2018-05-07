@@ -1,0 +1,23 @@
+{
+    "options": {
+        "consul-base": {
+            "server": false,
+            "web-ui": false
+        },
+        "consul-agent": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:consul-base",
+        "interface:consul-agent",
+        "interface:consul"
+    ],
+    "repo": "https://github.com/jamesbeedy/charm-consul-agent.git",
+    "is": "consul-agent"
+}

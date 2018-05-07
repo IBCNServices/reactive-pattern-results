@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "tar",
+                "nfs-kernel-server",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-platform-lsf-storage": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-platform-lsf-storage/trunk/",
+    "includes": [
+        "layer:basic",
+        "interface:nfsstorage"
+    ],
+    "is": "ibm-platform-lsf-storage"
+}

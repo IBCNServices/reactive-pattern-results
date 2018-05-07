@@ -1,0 +1,22 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "qemu-kvm",
+                "libvirt-bin",
+                "bridge-utils",
+                "virt-viewer",
+                "virt-manager",
+                "hugepages"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "openvim-compute": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:openvim-compute"
+    ],
+    "is": "openvim-compute"
+}

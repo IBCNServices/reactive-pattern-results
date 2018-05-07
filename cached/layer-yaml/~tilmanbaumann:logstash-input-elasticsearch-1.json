@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python-jinja2"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "logstash-input-elasticsearch": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:elasticsearch",
+        "interface:juju-info"
+    ],
+    "repo": "github.com:tbaumann/charm-logstash-input-elasticsearch.git",
+    "is": "logstash-input-elasticsearch"
+}

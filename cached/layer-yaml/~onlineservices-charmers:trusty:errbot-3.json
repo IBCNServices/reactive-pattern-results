@@ -1,0 +1,9 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:local-monitors",
+        "interface:nrpe-external-master",
+        "interface:http"
+    ],
+    "is": "errbot"
+}

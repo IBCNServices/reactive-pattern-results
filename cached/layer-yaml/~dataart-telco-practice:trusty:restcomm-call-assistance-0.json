@@ -1,0 +1,16 @@
+{
+    "options": {
+        "restcomm-call-assistance": {},
+        "restcomm-app": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:restcomm-app"
+    ],
+    "is": "restcomm-call-assistance"
+}

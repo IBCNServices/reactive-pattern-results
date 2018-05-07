@@ -1,0 +1,23 @@
+{
+    "options": {
+        "tor-bridge": {},
+        "tor-layers/tor": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:apt",
+        "layer:basic",
+        "layer:tor-layers/tor"
+    ],
+    "repo": "https://github.com/cmars/tor-layers.git",
+    "is": "tor-bridge"
+}

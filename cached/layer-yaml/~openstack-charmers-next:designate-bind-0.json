@@ -1,0 +1,17 @@
+{
+    "options": {
+        "openstack": {},
+        "designate-bind": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "interface:bind-rndc"
+    ],
+    "is": "designate-bind"
+}

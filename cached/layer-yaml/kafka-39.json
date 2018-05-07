@@ -1,0 +1,55 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "kafka"
+            ],
+            "users": {
+                "kafka": {
+                    "groups": [
+                        "kafka"
+                    ]
+                }
+            },
+            "ports": {
+                "kafka": {
+                    "port": 9092,
+                    "exposed_on": "kafka"
+                }
+            },
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "nvidia-cuda": {},
+        "kafka": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-bigtop-kafka.git",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "interface:zookeeper",
+        "interface:kafka"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "kafka"
+}

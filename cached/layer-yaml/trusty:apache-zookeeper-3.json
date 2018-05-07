@@ -1,0 +1,21 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "ant",
+                "default-jdk"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-zookeeper": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-zookeeper.git",
+    "includes": [
+        "layer:basic",
+        "interface:zookeeper-quorum",
+        "interface:zookeeper"
+    ],
+    "is": "apache-zookeeper"
+}

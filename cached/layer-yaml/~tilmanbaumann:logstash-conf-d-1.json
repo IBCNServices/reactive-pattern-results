@@ -1,0 +1,15 @@
+{
+    "options": {
+        "logstash-conf-d": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "github.com:tbaumann/charm-logstash-conf-d.git",
+    "is": "logstash-conf-d"
+}

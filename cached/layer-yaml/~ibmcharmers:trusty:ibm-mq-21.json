@@ -1,0 +1,28 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "rpm"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {},
+        "ibm-mq": {},
+        "apt": {
+            "packages": []
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:ibm-base",
+        "interface:ibm-mq"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-mq/trunk/",
+    "is": "ibm-mq"
+}

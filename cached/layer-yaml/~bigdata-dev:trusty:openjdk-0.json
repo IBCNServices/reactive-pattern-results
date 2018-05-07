@@ -1,0 +1,16 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "openjdk": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-openjdk.git",
+    "includes": [
+        "layer:basic",
+        "interface:java"
+    ],
+    "is": "openjdk"
+}

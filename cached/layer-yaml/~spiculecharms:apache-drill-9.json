@@ -1,0 +1,25 @@
+{
+    "options": {
+        "snap": {},
+        "apache-drill": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:zookeeper",
+        "interface:java",
+        "interface:mongodb",
+        "interface:dfs",
+        "interface:mysql",
+        "interface:pgsql",
+        "interface:hbase",
+        "interface:jdbc"
+    ],
+    "repo": "https://git.launchpad.net/layer-snap",
+    "is": "apache-drill"
+}

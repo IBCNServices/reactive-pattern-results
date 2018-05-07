@@ -1,0 +1,81 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "mapred",
+                "spark",
+                "yarn"
+            ],
+            "users": {
+                "mapred": {
+                    "groups": [
+                        "mapred",
+                        "hadoop"
+                    ]
+                },
+                "spark": {
+                    "groups": [
+                        "spark",
+                        "hadoop"
+                    ]
+                },
+                "ubuntu": {
+                    "groups": [
+                        "hadoop",
+                        "mapred",
+                        "spark"
+                    ]
+                },
+                "yarn": {
+                    "groups": [
+                        "yarn",
+                        "hadoop"
+                    ]
+                }
+            },
+            "ports": {
+                "namenode": {
+                    "port": 8020
+                },
+                "nn_webapp_http": {
+                    "port": 50070,
+                    "exposed_on": "namenode"
+                }
+            },
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "nvidia-cuda": {},
+        "hadoop-namenode": {}
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/hadoop/layer-hadoop-namenode",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "interface:dfs",
+        "interface:dfs-slave",
+        "interface:benchmark"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "hadoop-namenode"
+}

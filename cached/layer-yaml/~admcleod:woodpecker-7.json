@@ -1,0 +1,16 @@
+{
+    "options": {
+        "woodpecker": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:andrewdmcleod/woodpecker-layer.git",
+    "includes": [
+        "layer:basic",
+        "interface:woodpecker"
+    ],
+    "is": "woodpecker"
+}

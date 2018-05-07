@@ -1,0 +1,37 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "basic": {
+            "packages": [
+                "gnupg",
+                "reprepro",
+                "apache2-utils"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "nagios": {},
+        "nginx": {},
+        "leadership": {},
+        "archive-auth-mirror": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "interface:nrpe-external-master",
+        "layer:leadership",
+        "layer:nginx",
+        "layer:nagios",
+        "interface:basic-auth-check",
+        "interface:ssh-peers"
+    ],
+    "repo": "https://github.com/CanonicalLtd/archive-auth-mirror",
+    "is": "archive-auth-mirror"
+}

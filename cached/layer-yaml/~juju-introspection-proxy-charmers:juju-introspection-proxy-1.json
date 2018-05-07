@@ -1,0 +1,17 @@
+{
+    "options": {
+        "snap": {},
+        "juju-introspection-proxy": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap"
+    ],
+    "repo": "https://git.launchpad.net/juju-introspection-proxy-charm",
+    "is": "juju-introspection-proxy"
+}

@@ -1,0 +1,49 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "socat"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "snap": {
+            "kube-apiserver": {
+                "channel": "edge",
+                "devmode": false,
+                "jailmode": false,
+                "dangerous": false,
+                "classic": true
+            }
+        },
+        "tls-client": {
+            "ca_certificate_path": "/srv/kubernetes/ca.crt",
+            "server_certificate_path": "/srv/kubernetes/server.crt",
+            "server_key_path": "/srv/kubernetes/server.key",
+            "client_certificate_path": "/srv/kubernetes/client.crt",
+            "client_key_path": "/srv/kubernetes/client.key"
+        },
+        "debug": {},
+        "kubernetes-master": {}
+    },
+    "repo": "https://github.com/kubernetes/kubernetes.git",
+    "includes": [
+        "layer:basic",
+        "interface:tls-certificates",
+        "layer:basic",
+        "layer:basic",
+        "layer:snap",
+        "layer:tls-client",
+        "layer:debug",
+        "interface:etcd",
+        "interface:http",
+        "interface:kubernetes-cni",
+        "interface:kube-dns",
+        "interface:ceph-admin",
+        "interface:public-address"
+    ],
+    "tactics": [
+        "tactics.update_addons.UpdateAddonsTactic"
+    ],
+    "is": "kubernetes-master"
+}

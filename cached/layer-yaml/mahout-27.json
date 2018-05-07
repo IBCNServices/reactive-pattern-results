@@ -1,0 +1,37 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "nvidia-cuda": {},
+        "mahout": {},
+        "apache-bigtop-base": {
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        }
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/mahout/layer-mahout",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "layer:apache-bigtop-base"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "mahout"
+}

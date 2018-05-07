@@ -1,0 +1,26 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "uwsgi",
+                "uwsgi-plugin-python"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "nginx": {},
+        "charm-svg": {},
+        "uwsgi": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:http",
+        "layer:basic",
+        "layer:apt",
+        "layer:uwsgi",
+        "layer:nginx"
+    ],
+    "repo": "https://github.com/marcoceppi/layer-charmsvg.git",
+    "is": "charm-svg"
+}

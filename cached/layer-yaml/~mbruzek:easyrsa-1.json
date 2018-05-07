@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "openssl"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "layer-leadership": {},
+        "easyrsa": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:leadership",
+        "interface:tls-certificates"
+    ],
+    "repo": "http://github.com/juju-solutions/layer-easyrsa.git",
+    "exclude": [
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "easyrsa"
+}

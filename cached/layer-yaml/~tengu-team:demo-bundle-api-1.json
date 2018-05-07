@@ -1,0 +1,27 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "python3-pip"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "streambundle-api": {},
+        "nginx-passenger": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx-passenger",
+        "interface:mongodb-database"
+    ],
+    "repo": "https://github.com/tengu-team/layer-streambundle-api.git",
+    "is": "streambundle-api"
+}

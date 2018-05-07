@@ -1,0 +1,40 @@
+{
+    "options": {
+        "storage": {
+            "storage-driver": "zfs",
+            "mount-point": "/srv/kubernetes"
+        },
+        "tls": {},
+        "kubernetes": {},
+        "leadership": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "docker": {
+            "skip-install": false
+        },
+        "flannel": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:etcd",
+        "layer:docker",
+        "layer:apt",
+        "interface:tls",
+        "layer:leadership",
+        "layer:flannel",
+        "layer:storage",
+        "layer:tls"
+    ],
+    "repo": "https://github.com/mbruzek/layer-k8s.git",
+    "tactics": [
+        "tactics.docker.DockerWheelhouseTactic"
+    ],
+    "exclude": [
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "kubernetes"
+}

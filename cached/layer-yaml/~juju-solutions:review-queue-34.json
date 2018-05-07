@@ -1,0 +1,28 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "make",
+                "python",
+                "python-virtualenv"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "review-queue": {},
+        "nagios": {},
+        "leadership": {}
+    },
+    "repo": "https://github.com/juju-solutions/review-queue-charm.git",
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:nagios",
+        "layer:leadership",
+        "interface:pgsql",
+        "interface:http",
+        "interface:rabbitmq",
+        "interface:cwr-ci"
+    ],
+    "is": "review-queue"
+}

@@ -1,0 +1,32 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack-principle": {},
+        "openstack": {},
+        "openstack-api": {},
+        "aodh": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "layer:openstack-principle",
+        "interface:mysql-shared",
+        "interface:rabbitmq",
+        "interface:keystone",
+        "interface:hacluster",
+        "interface:openstack-ha",
+        "layer:openstack-api",
+        "interface:mongodb"
+    ],
+    "repo": "https://github.com/openstack/charm-aodh",
+    "config": {
+        "deletes": [
+            "verbose"
+        ]
+    },
+    "is": "aodh"
+}

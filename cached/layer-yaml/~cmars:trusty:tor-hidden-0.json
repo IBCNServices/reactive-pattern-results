@@ -1,0 +1,16 @@
+{
+    "options": {
+        "tor-hidden": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:tor-layers/tor",
+        "interface:http"
+    ],
+    "is": "tor-hidden"
+}

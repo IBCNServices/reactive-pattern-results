@@ -1,0 +1,34 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {
+            "silent": true
+        },
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "leadership": {},
+        "ibm-base": {},
+        "ibm-wxs-client": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:ibm-base",
+        "layer:ibm-im",
+        "interface:was-nd",
+        "interface:ibm-wxs",
+        "interface:juju-info"
+    ],
+    "is": "ibm-wxs-client"
+}

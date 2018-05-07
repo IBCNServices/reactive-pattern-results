@@ -1,0 +1,30 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "--no-install-recommends",
+                "git"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "gogs": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:pgsql",
+        "interface:http"
+    ],
+    "repo": "https://github.com:cmars/juju-charm-gogs.git",
+    "ignore": {
+        "gogs": [
+            "builds",
+            "deps",
+            "tests",
+            "trusty",
+            "xenial",
+            ".*.swp"
+        ]
+    },
+    "is": "gogs"
+}

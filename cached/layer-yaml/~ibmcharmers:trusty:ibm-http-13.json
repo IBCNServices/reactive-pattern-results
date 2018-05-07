@@ -1,0 +1,30 @@
+{
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-http/trunk/",
+    "includes": [
+        "layer:ibm-base",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-im",
+        "interface:was-ihs"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "curl",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-http": {},
+        "ibm-im": {},
+        "apt": {
+            "packages": []
+        },
+        "leadership": {},
+        "ibm-base": {}
+    },
+    "is": "ibm-http"
+}

@@ -1,0 +1,19 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "interface:neutron-plugin-api-subordinate",
+        "interface:odl-controller-api"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack": {},
+        "neutron-api-odl": {}
+    },
+    "is": "neutron-api-odl"
+}

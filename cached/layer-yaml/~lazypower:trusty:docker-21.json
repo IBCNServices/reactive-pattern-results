@@ -1,0 +1,23 @@
+{
+    "options": {
+        "storage": {
+            "storage-driver": "zfs",
+            "mount-point": "/var/lib/docker"
+        },
+        "docker": {
+            "skip-install": false
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:storage"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-docker.git",
+    "is": "docker"
+}

@@ -1,0 +1,16 @@
+{
+    "options": {
+        "gypsy-danger": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:grafana-source",
+        "interface:mysql"
+    ],
+    "is": "gypsy-danger"
+}

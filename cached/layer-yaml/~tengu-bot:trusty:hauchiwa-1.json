@@ -1,0 +1,19 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:juju-client",
+        "interface:http",
+        "interface:opened-ports"
+    ],
+    "options": {
+        "juju-client": {},
+        "hauchiwa": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:IBCNServices/tengu-charms.git",
+    "is": "hauchiwa"
+}

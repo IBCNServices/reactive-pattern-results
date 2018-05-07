@@ -1,0 +1,50 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "ports": {
+                "zookeeper-rest": {
+                    "port": 9998,
+                    "exposed_on": "zookeeper"
+                },
+                "zookeeper": {
+                    "port": 2181,
+                    "exposed_on": "zookeeper"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "1.1.0",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_repo_url": "http://bigtop-repos.s3.amazonaws.com/releases/{version}/{dist}/{series}/{arch}",
+            "bigtop_global_hiera": "/etc/puppet/hiera.yaml",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml"
+        },
+        "leadership": {},
+        "zookeeper": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:java",
+        "layer:basic",
+        "layer:apache-bigtop-base",
+        "layer:leadership",
+        "interface:zookeeper-quorum",
+        "interface:zookeeper"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/zookeeper/layer-zookeeper",
+    "is": "zookeeper"
+}

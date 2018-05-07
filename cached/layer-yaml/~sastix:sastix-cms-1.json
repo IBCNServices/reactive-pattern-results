@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [
+                "default-jre"
+            ],
+            "include_system_packages": false
+        },
+        "sastix-cms": {}
+    },
+    "repo": "git@github.com:sastix/cmse-charm-layer.git",
+    "includes": [
+        "layer:basic",
+        "interface:mysql"
+    ],
+    "is": "sastix-cms"
+}

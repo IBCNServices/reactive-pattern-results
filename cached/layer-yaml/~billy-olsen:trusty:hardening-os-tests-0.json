@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:ruby"
+    ],
+    "is": "hardening-os-tests"
+}

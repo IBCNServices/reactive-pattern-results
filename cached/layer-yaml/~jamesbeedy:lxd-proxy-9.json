@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "iptables-persistent"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "lxd-proxy": {}
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "http://github.com/jamesbeedy/layer-lxd-proxy.git",
+    "is": "lxd-proxy"
+}

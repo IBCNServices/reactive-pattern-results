@@ -1,0 +1,49 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:puppet-agent",
+        "interface:java",
+        "layer:basic",
+        "layer:apt",
+        "layer:basic",
+        "layer:apache-bigtop-base",
+        "layer:leadership"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "dphys-swapfile",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "puppet-agent": {
+            "puppet-version": "3",
+            "silent": true
+        },
+        "apache-bigtop-base": {
+            "bigtop_smoketest_components": [
+                "alluxio"
+            ],
+            "ports": {
+                "alluxio": {
+                    "port": 19999,
+                    "exposed_on": "alluxio"
+                }
+            },
+            "bigtop_version": "bigtop-master",
+            "bigtop_repo-x86_64": "https://ci.bigtop.apache.org/job/Bigtop-trunk/BUILD_ENVIRONMENTS%3Dubuntu-14.04,label%3Ddocker-slave/lastSuccessfulBuild/artifact/output/apt/",
+            "bigtop_release_url": "https://github.com/apache/bigtop/archive/master.zip",
+            "bigtop_component_list": "hadoop",
+            "bigtop_repo-ppc64el": "http://bigtop-repos.s3.amazonaws.com/releases/1.1.0/ubuntu/vivid/ppc64el",
+            "bigtop_hiera_path": "/etc/puppet/hiera.yaml",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml"
+        },
+        "leadership": {},
+        "alluxio": {}
+    },
+    "repo": "https://github.com/jamesbeedy/layer-puppet-agent.git",
+    "is": "alluxio"
+}

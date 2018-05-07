@@ -1,0 +1,25 @@
+{
+    "options": {
+        "kubernetes-workload": {
+            "service": "frontend"
+        },
+        "guestbook": {},
+        "kubernetes-node-local": {
+            "image-resources": [],
+            "image-files": []
+        },
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:kubernetes-workload",
+        "layer:kubernetes-workload",
+        "layer:kubernetes-node-local",
+        "interface:http"
+    ],
+    "is": "guestbook"
+}

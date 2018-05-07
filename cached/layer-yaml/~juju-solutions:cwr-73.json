@@ -1,0 +1,32 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "apt": {
+            "packages": [
+                "lxd",
+                "juju",
+                "python-apport",
+                "python-yaml",
+                "jq",
+                "unzip",
+                "gpgv2",
+                "charm-tools"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "cwr": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:jenkins-extension",
+        "interface:cwr-ci"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-cwr.git",
+    "is": "cwr"
+}

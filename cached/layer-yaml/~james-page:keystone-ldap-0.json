@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack": {},
+        "keystone-ldap": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "interface:keystone-domain-backend"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "is": "keystone-ldap"
+}

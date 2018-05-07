@@ -1,0 +1,23 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "ipset"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "leadership": {},
+        "dcos-master": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:dcos",
+        "layer:leadership",
+        "interface:logstash-client",
+        "interface:local-monitors"
+    ],
+    "repo": "https://github.com/buggtb/dcos-master-charm.git",
+    "is": "dcos-master"
+}

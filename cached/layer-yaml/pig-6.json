@@ -1,0 +1,55 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "dirs": {
+                "pig": {
+                    "path": "/usr/lib/pig"
+                },
+                "pig_conf": {
+                    "path": "/etc/pig/conf"
+                },
+                "hadoop_conf": {
+                    "path": "/etc/hadoop/conf"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "1.2.0"
+        },
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        },
+        "pig": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "interface:java",
+        "interface:hadoop-plugin",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/pig/layer-pig",
+    "is": "pig"
+}

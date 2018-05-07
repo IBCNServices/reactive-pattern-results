@@ -1,0 +1,22 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-netifaces",
+                "python3-netaddr"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "staticroutes": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:juju-info"
+    ],
+    "ignore": [
+        "README.md"
+    ],
+    "repo": "https://gitlab.com/bertjwregeer/juju_staticroutes.git",
+    "is": "staticroutes"
+}

@@ -1,0 +1,31 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "default-jre",
+                "libboost-all-dev",
+                "automake",
+                "bison",
+                "flex",
+                "g++",
+                "libevent-dev",
+                "libssl-dev",
+                "libtool",
+                "make",
+                "pkg-config",
+                "gnuplot"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "opentsdb": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "interface:zookeeper",
+        "interface:hbase"
+    ],
+    "repo": "https://github.com/Qrama/layer-opentsdb.git",
+    "is": "opentsdb"
+}

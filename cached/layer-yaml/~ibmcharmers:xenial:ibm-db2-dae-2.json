@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "binutils",
+                "pwgen",
+                "tar",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-db2-dae": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:db2"
+    ],
+    "is": "ibm-db2-dae"
+}

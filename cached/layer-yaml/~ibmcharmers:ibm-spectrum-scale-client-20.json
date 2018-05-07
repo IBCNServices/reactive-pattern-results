@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "tar",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-spectrum-scale-client": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/ibmlayers/layer-ibm-spectrum-scale-client/",
+    "includes": [
+        "layer:basic",
+        "interface:gpfs",
+        "interface:spectrum-scale-client"
+    ],
+    "is": "ibm-spectrum-scale-client"
+}

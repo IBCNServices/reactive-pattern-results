@@ -1,0 +1,10 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:http"
+    ],
+    "options": {
+        "apache-php": {}
+    },
+    "is": "layer:apache-php"
+}

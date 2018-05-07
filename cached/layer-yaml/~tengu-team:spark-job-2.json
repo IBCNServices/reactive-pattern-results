@@ -1,0 +1,18 @@
+{
+    "options": {
+        "Spark-Job": {},
+        "leadership": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:leadership",
+        "interface:spark"
+    ],
+    "repo": "https://github.com/tengu-team/layer-python-spark-job.git",
+    "is": "Spark-Job"
+}

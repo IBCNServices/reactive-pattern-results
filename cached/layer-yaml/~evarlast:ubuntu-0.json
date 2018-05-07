@@ -1,0 +1,15 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "ubuntu": {}
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "https://github.com/marcoceppi/charm-ubuntu",
+    "is": "ubuntu"
+}

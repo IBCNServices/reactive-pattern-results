@@ -1,0 +1,18 @@
+{
+    "options": {
+        "apache-flume-base": {},
+        "apache-flume-twitter": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apache-flume-base",
+        "interface:flume-agent"
+    ],
+    "repo": "git@github.com:juju-solutions/layer-apache-flume-twitter.git",
+    "is": "apache-flume-twitter"
+}

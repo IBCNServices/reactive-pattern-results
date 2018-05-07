@@ -1,0 +1,18 @@
+{
+    "options": {
+        "activemq-flow": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:activemq-topic",
+        "interface:nodered-flow",
+        "interface:mongodb-database"
+    ],
+    "repo": "git@github.com/tengu-team/layer-activemq-flow",
+    "is": "activemq-flow"
+}

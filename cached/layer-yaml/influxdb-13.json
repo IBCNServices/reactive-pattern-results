@@ -1,0 +1,32 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": [
+                "build-essential",
+                "python3-setuptools",
+                "python3-wheel",
+                "python3-yaml"
+            ]
+        },
+        "nagios": {},
+        "influxdb": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "repo": "https://git.launchpad.net/influxdb-charm",
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:apt",
+        "layer:nagios",
+        "interface:http",
+        "interface:grafana-source",
+        "interface:influxdb-api"
+    ],
+    "is": "influxdb"
+}

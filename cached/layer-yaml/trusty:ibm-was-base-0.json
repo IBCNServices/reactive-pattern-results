@@ -1,0 +1,32 @@
+{
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-im/trunk/",
+    "includes": [
+        "layer:ibm-base",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-im",
+        "interface:was-ihs",
+        "interface:db2",
+        "interface:ibm-mq"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "curl",
+                "pwgen"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {},
+        "apt": {
+            "packages": []
+        },
+        "leadership": {},
+        "ibm-was-base": {},
+        "ibm-base": {}
+    },
+    "is": "ibm-was-base"
+}

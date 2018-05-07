@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "flannel": {}
+    },
+    "includes": [
+        "interface:etcd",
+        "interface:sdn-plugin",
+        "layer:basic"
+    ],
+    "repo": "https://github.com/juju-solutions/charm-flannel.git",
+    "is": "flannel"
+}

@@ -1,0 +1,37 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python-setuptools",
+                "python-pip",
+                "python-dev",
+                "libxslt1-dev",
+                "libxml2-dev",
+                "libz-dev",
+                "libffi-dev",
+                "libssl-dev",
+                "libpq-dev",
+                "libyaml-dev",
+                "python-virtualenv",
+                "supervisor",
+                "redis-server"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "nginx": {},
+        "sentry": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "layer:basic",
+        "layer:nginx",
+        "interface:pgsql",
+        "interface:http",
+        "interface:rabbitmq",
+        "interface:memcache"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-sentry.git",
+    "is": "sentry"
+}

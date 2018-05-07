@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": [
+                "python3-yaml"
+            ]
+        },
+        "telegraf": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:elasticsearch",
+        "interface:influxdb-api",
+        "interface:memcache",
+        "interface:mongodb",
+        "interface:pgsql",
+        "interface:juju-info",
+        "interface:http"
+    ],
+    "repo": "https://git.launchpad.net/~verterok/charms/+source/telegraf",
+    "is": "telegraf"
+}

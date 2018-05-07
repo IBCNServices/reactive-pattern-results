@@ -1,0 +1,7 @@
+{
+    "repo": "git+ssh://git.launchpad.net/elasticsearch-charm",
+    "options": {
+        "elasticsearch": {}
+    },
+    "is": "elasticsearch"
+}

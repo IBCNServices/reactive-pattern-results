@@ -1,0 +1,88 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "dphys-swapfile",
+                "puppet-common",
+                "unzip",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "groups": [
+                "hadoop",
+                "zeppelin"
+            ],
+            "users": {
+                "ubuntu": {
+                    "groups": [
+                        "hadoop",
+                        "zeppelin"
+                    ]
+                }
+            },
+            "dirs": {
+                "zeppelin": {
+                    "path": "/usr/lib/zeppelin"
+                },
+                "zeppelin_conf": {
+                    "path": "/etc/zeppelin/conf"
+                },
+                "zeppelin_logs": {
+                    "path": "/var/log/zeppelin"
+                },
+                "zeppelin_notebooks": {
+                    "path": "/var/lib/zeppelin/notebook"
+                }
+            },
+            "ports": {
+                "zeppelin": {
+                    "port": 9080,
+                    "exposed_on": "zeppelin"
+                },
+                "zeppelin_web": {
+                    "port": 9081,
+                    "exposed_on": "zeppelin"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "1.1.0",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_repo_url": "http://bigtop-repos.s3.amazonaws.com/releases/{version}/{dist}/{series}/{arch}",
+            "bigtop_global_hiera": "/etc/puppet/hiera.yaml",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml"
+        },
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        },
+        "zeppelin": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:java",
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client",
+        "interface:hive",
+        "interface:spark",
+        "interface:zeppelin"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "repo": "git@github.com:juju-solutions/bigtop.git",
+    "is": "zeppelin"
+}

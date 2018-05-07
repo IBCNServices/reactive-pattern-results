@@ -1,0 +1,27 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-requests"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "snap": {
+            "graylog": {
+                "channel": "stable"
+            }
+        },
+        "graylog": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:elasticsearch",
+        "interface:http",
+        "interface:mongodb-cluster",
+        "interface:nrpe-external-master"
+    ],
+    "repo": "git+ssh://git.launchpad.net/graylog-charm",
+    "is": "graylog"
+}

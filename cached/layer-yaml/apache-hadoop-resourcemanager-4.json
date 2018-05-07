@@ -1,0 +1,41 @@
+{
+    "options": {
+        "hadoop-base": {
+            "ports": {
+                "resourcemanager": {
+                    "port": 8032
+                },
+                "rm_webapp_http": {
+                    "port": 8088,
+                    "exposed_on": "resourcemanager"
+                },
+                "jobhistory": {
+                    "port": 10020
+                },
+                "jh_webapp_http": {
+                    "port": 19888,
+                    "exposed_on": "resourcemanager"
+                }
+            }
+        },
+        "hadoop-ganglia": {},
+        "apache-hadoop-resourcemanager": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:monitor",
+        "layer:hadoop-base",
+        "layer:hadoop-ganglia",
+        "interface:dfs",
+        "interface:mapred",
+        "interface:mapred-slave",
+        "interface:benchmark"
+    ],
+    "repo": "git@github.com:juju-solutions/layer-apache-hadoop-resourcemanager.git",
+    "is": "apache-hadoop-resourcemanager"
+}

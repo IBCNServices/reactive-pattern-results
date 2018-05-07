@@ -1,0 +1,17 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/ibmlayers/layer-ibm-im",
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "ibm-im"
+}

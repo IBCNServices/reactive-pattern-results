@@ -1,0 +1,17 @@
+{
+    "options": {
+        "kapacitor": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:influxdb-api",
+        "interface:kapacitor"
+    ],
+    "repo": "git@github.com:tengu-team/layer-kapacitor.git",
+    "is": "kapacitor"
+}

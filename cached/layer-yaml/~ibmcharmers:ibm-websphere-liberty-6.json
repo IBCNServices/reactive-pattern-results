@@ -1,0 +1,22 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "git-core",
+                "default-jdk",
+                "maven",
+                "libderby-java"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-websphere-liberty": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/ibmlayers/layer-ibm-websphere-liberty",
+    "includes": [
+        "layer:basic",
+        "interface:https"
+    ],
+    "is": "ibm-websphere-liberty"
+}

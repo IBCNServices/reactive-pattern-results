@@ -1,0 +1,35 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "rsync"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "tls-client": {
+            "ca_certificate_path": "/etc/ssl/etcd/ca.crt",
+            "server_certificate_path": "/etc/ssl/etcd/server.crt",
+            "server_key_path": "/etc/ssl/etcd/server.key",
+            "client_certificate_path": "/etc/ssl/etcd/client.crt",
+            "client_key_path": "/etc/ssl/etcd/client.key"
+        },
+        "nagios": {},
+        "leadership": {},
+        "etcd": {},
+        "debug": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "interface:tls-certificates",
+        "layer:debug",
+        "layer:leadership",
+        "layer:nagios",
+        "layer:tls-client",
+        "interface:etcd",
+        "interface:etcd-proxy"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-etcd.git",
+    "is": "etcd"
+}

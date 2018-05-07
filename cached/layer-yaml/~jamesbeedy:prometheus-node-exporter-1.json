@@ -1,0 +1,16 @@
+{
+    "options": {
+        "prometheus-node-exporter": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:prometheus"
+    ],
+    "repo": "https://github.com/talentiq/charms",
+    "is": "prometheus-node-exporter"
+}

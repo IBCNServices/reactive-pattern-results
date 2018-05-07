@@ -1,0 +1,70 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "ports": {
+                "hbase-master": {
+                    "port": 60000,
+                    "exposed_on": "hbase"
+                },
+                "hbase-master-web": {
+                    "port": 60010,
+                    "exposed_on": "hbase"
+                },
+                "hbase-region": {
+                    "port": 60020,
+                    "exposed_on": "hbase"
+                },
+                "hbase-region-web": {
+                    "port": 60030,
+                    "exposed_on": "hbase"
+                },
+                "hbase-thrift": {
+                    "port": 9090,
+                    "exposed_on": "hbase"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "master"
+        },
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        },
+        "hbase": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "interface:java",
+        "interface:hadoop-plugin",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client",
+        "interface:zookeeper",
+        "interface:benchmark",
+        "interface:hbase",
+        "interface:hbase-quorum"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/hbase/layer-hbase",
+    "is": "hbase"
+}

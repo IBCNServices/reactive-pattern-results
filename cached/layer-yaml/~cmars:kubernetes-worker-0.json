@@ -1,0 +1,36 @@
+{
+    "options": {
+        "tls-client": {
+            "ca_certificate_path": "/srv/kubernetes/ca.crt",
+            "server_certificate_path": "/srv/kubernetes/server.crt",
+            "server_key_path": "/srv/kubernetes/server.key",
+            "client_certificate_path": "/srv/kubernetes/client.crt",
+            "client_key_path": "/srv/kubernetes/client.key"
+        },
+        "docker": {
+            "skip-install": false
+        },
+        "kubernetes-worker": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "interface:tls-certificates",
+        "layer:basic",
+        "layer:docker",
+        "layer:tls-client",
+        "interface:http",
+        "interface:sdn-plugin",
+        "interface:kube-dns"
+    ],
+    "repo": "https://github.com/kubernetes/kubernetes",
+    "excludes": [
+        "LAYER_README.md"
+    ],
+    "is": "kubernetes-worker"
+}

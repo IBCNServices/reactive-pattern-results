@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "golang-go"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "juju-introspection": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:prometheus"
+    ],
+    "repo": "github.com:axw/juju-introspection-charm",
+    "is": "juju-introspection"
+}

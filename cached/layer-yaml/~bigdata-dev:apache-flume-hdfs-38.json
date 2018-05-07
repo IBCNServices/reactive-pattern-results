@@ -1,0 +1,31 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "openjdk-8-jdk-headless"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-flume-hdfs": {},
+        "apache-flume-base": {},
+        "hadoop-client": {
+            "dirs": {},
+            "silent": false,
+            "groups": [],
+            "packages": [],
+            "ports": {},
+            "users": {}
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:apache-flume-base",
+        "layer:hadoop-client",
+        "interface:flume-agent"
+    ],
+    "repo": "git@github.com:juju-solutions/layer-apache-flume-hdfs.git",
+    "is": "apache-flume-hdfs"
+}

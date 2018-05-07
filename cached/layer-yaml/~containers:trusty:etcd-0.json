@@ -1,0 +1,10 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:etcd"
+    ],
+    "exclude": [
+        "Makefile"
+    ],
+    "is": "etcd"
+}

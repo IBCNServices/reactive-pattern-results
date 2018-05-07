@@ -1,0 +1,28 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "docker.io"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "docker": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:docker-image-host"
+    ],
+    "repo": "git@github.com:IBCNServices/layer-docker.git",
+    "exclude": [
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "docker"
+}

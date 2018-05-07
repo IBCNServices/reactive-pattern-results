@@ -1,0 +1,42 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "hadoop-plugin": {},
+        "apache-bigtop-base": {
+            "install_java": "openjdk-8-jdk",
+            "bigtop_version": "master",
+            "bigtop_component_list": "hadoop"
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "interface:hadoop-plugin",
+        "interface:dfs",
+        "interface:mapred"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/hadoop/layer-hadoop-plugin",
+    "metadata": {
+        "deletes": [
+            "provides.java"
+        ]
+    },
+    "is": "hadoop-plugin"
+}

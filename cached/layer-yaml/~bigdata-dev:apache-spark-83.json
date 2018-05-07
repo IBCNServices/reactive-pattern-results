@@ -1,0 +1,70 @@
+{
+    "options": {
+        "hadoop-client": {
+            "groups": [
+                "hadoop"
+            ],
+            "packages": [
+                "ipython",
+                "libgfortran3",
+                "scala"
+            ],
+            "dirs": {
+                "spark": {
+                    "path": "/usr/lib/spark"
+                },
+                "spark_conf": {
+                    "path": "/etc/spark/conf"
+                },
+                "log_prefix": {
+                    "path": "/var/log"
+                },
+                "spark_logs": {
+                    "path": "{dirs[log_prefix]}/spark",
+                    "owner": "ubuntu",
+                    "group": "hadoop"
+                },
+                "spark_events": {
+                    "path": "{dirs[log_prefix]}/spark/events",
+                    "owner": "ubuntu",
+                    "group": "hadoop"
+                },
+                "spark_work": {
+                    "path": "/var/lib/spark/work",
+                    "owner": "ubuntu",
+                    "group": "hadoop"
+                }
+            },
+            "ports": {
+                "spark-history": {
+                    "port": 18080,
+                    "exposed_on": "spark"
+                },
+                "spark-webui": {
+                    "port": 8080,
+                    "exposed_on": "spark"
+                }
+            },
+            "silent": true,
+            "users": {}
+        },
+        "apache-spark": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-spark.git",
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:hadoop-client",
+        "interface:spark",
+        "interface:benchmark",
+        "interface:spark-quorum",
+        "interface:zookeeper"
+    ],
+    "is": "apache-spark"
+}

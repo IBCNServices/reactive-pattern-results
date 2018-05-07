@@ -1,0 +1,18 @@
+{
+    "options": {
+        "limeds": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "interface:docker-image-host",
+        "interface:limeds"
+    ],
+    "repo": "git@github.com:IBCNServices/layer-limeds.git",
+    "is": "limeds"
+}

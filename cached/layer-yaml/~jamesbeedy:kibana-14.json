@@ -1,0 +1,34 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "openjdk-8-jre-headless",
+                "nginx-full"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "elastic-base": {
+            "elastic-pkg": "kibana"
+        },
+        "kibana": {},
+        "elasticsearch-client": {},
+        "nginx": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "interface:elasticsearch",
+        "layer:elastic-base",
+        "layer:elasticsearch-client"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-kibana",
+    "is": "kibana"
+}

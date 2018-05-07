@@ -1,0 +1,33 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full",
+                "letsencrypt",
+                "python3-psycopg2"
+            ]
+        },
+        "nginx": {},
+        "lets-encrypt": {},
+        "mattermost": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:basic",
+        "layer:nginx",
+        "layer:basic",
+        "layer:lets-encrypt",
+        "layer:metrics",
+        "interface:pgsql",
+        "interface:http"
+    ],
+    "repo": "https://github.com/cmars/juju-charm-mattermost.git",
+    "is": "mattermost"
+}

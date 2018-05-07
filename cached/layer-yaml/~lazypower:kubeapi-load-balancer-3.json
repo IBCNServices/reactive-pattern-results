@@ -1,0 +1,34 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full"
+            ]
+        },
+        "tls-client": {
+            "ca_certificate_path": "/srv/kubernetes/ca.crt",
+            "server_certificate_path": "/srv/kubernetes/server.crt",
+            "server_key_path": "/srv/kubernetes/server.key",
+            "client_certificate_path": "/srv/kubernetes/client.crt",
+            "client_key_path": "/srv/kubernetes/client.key"
+        },
+        "kubeapi-load-balancer": {},
+        "nginx": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "interface:tls-certificates",
+        "layer:nginx",
+        "layer:tls-client",
+        "interface:public-address"
+    ],
+    "repo": "https://github.com/juju-solutions/kubernetes-load-balancer",
+    "is": "kubeapi-load-balancer"
+}

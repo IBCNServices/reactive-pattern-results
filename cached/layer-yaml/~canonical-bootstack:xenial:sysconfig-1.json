@@ -1,0 +1,25 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": [
+                "python3-yaml"
+            ]
+        },
+        "apt": {
+            "packages": [
+                "cpufrequtils"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "sysconfig": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt"
+    ],
+    "repo": "https://git.launchpad.net/~canonical-bootstack/bootstack-ops/+git/charm-sysconfig",
+    "is": "sysconfig"
+}

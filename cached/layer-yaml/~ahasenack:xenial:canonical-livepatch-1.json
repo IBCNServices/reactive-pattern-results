@@ -1,0 +1,26 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "python3-wheel",
+                "python3-setuptools"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "snap": {},
+        "canonical-livepatch": {},
+        "apt": {
+            "packages": []
+        }
+    },
+    "repo": "lp:~barryprice/+git/canonical-livepatch-built",
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:snap",
+        "interface:nrpe-external-master"
+    ],
+    "is": "canonical-livepatch"
+}

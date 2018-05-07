@@ -1,0 +1,19 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "interface:nrpe-external-master"
+    ],
+    "ignore": [
+        ".*.swp"
+    ],
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "collectd": {}
+    },
+    "is": "collectd"
+}

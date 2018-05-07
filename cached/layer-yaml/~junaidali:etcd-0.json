@@ -1,0 +1,25 @@
+{
+    "options": {
+        "tls": {},
+        "leadership": {},
+        "etcd": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:tls",
+        "layer:tls",
+        "layer:leadership",
+        "interface:etcd",
+        "interface:etcd-proxy"
+    ],
+    "ignore": [
+        "tests/00-setup"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-etcd.git",
+    "is": "etcd"
+}

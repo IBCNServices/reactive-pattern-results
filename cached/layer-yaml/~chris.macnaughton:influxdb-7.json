@@ -1,0 +1,23 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "influxdb": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "repo": "https://github.com/ChrisMacNaughton/charm-influx",
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:influxdb-api",
+        "interface:http"
+    ],
+    "is": "influxdb"
+}

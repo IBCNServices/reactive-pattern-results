@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:rabbitmq"
+    ],
+    "repo": "https://github.com/thedac/amqp-client"
+}

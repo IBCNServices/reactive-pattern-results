@@ -1,0 +1,32 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {
+            "silent": true
+        },
+        "ibm-wxs-container": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "leadership": {},
+        "ibm-base": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:ibm-base",
+        "layer:ibm-im",
+        "interface:ibm-wxs"
+    ],
+    "is": "ibm-wxs-container"
+}

@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:django",
+        "layer:nginx"
+    ],
+    "is": "ubucon"
+}

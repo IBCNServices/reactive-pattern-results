@@ -1,0 +1,6 @@
+{
+    "includes": [
+        "layer:docker"
+    ],
+    "is": "fabric"
+}

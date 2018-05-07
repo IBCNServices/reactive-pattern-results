@@ -1,0 +1,29 @@
+{
+    "includes": [
+        "layer:openstack-principle",
+        "interface:mysql-shared",
+        "interface:rabbitmq",
+        "interface:keystone",
+        "interface:hacluster",
+        "interface:openstack-ha",
+        "layer:openstack",
+        "layer:basic",
+        "layer:openstack-api",
+        "interface:bind-rndc",
+        "interface:hacluster",
+        "interface:openstack-ha"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "options": {
+        "openstack-principle": {},
+        "openstack": {},
+        "openstack-api": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "designate": {}
+    },
+    "is": "designate"
+}

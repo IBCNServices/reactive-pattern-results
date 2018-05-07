@@ -1,0 +1,16 @@
+{
+    "options": {
+        "ibm-cinder-flashsystem": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:cinder-backend"
+    ],
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/xenial/layer-ibm-cinder-flashsystem/trunk/",
+    "is": "ibm-cinder-flashsystem"
+}

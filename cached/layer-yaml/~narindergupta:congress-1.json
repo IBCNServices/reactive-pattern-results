@@ -1,0 +1,34 @@
+{
+    "options": {
+        "openstack-principle": {},
+        "openstack": {},
+        "openstack-api": {},
+        "congress": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "layer:openstack-principle",
+        "interface:mysql-shared",
+        "interface:rabbitmq",
+        "interface:keystone",
+        "interface:hacluster",
+        "interface:openstack-ha",
+        "layer:basic",
+        "layer:openstack",
+        "layer:openstack-principle",
+        "interface:mysql-shared",
+        "interface:rabbitmq",
+        "interface:keystone",
+        "interface:hacluster",
+        "interface:openstack-ha",
+        "layer:openstack-api"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack-api",
+    "is": "congress"
+}

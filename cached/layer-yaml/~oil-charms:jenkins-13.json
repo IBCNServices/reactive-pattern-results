@@ -1,0 +1,35 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-testtools",
+                "pwgen"
+            ],
+            "include_system_packages": true,
+            "use_venv": false
+        },
+        "snap-action": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "jenkins-with-snaps": {},
+        "snap": {},
+        "jenkins": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "layer:apt",
+        "interface:http",
+        "interface:jenkins-slave",
+        "interface:jenkins-extension",
+        "interface:jenkins-zuul",
+        "interface:nrpe-external-master",
+        "layer:snap-action",
+        "layer:jenkins"
+    ],
+    "repo": "https://github.com/lutostag/jenkins-with-snaps.git",
+    "is": "jenkins-with-snaps"
+}

@@ -1,0 +1,20 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:java"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "bzr",
+                "cvs",
+                "git",
+                "subversion"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ubuntu-devenv": {}
+    },
+    "is": "ubuntu-devenv"
+}

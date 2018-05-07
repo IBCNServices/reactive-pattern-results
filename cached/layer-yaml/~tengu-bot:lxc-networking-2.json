@@ -1,0 +1,15 @@
+{
+    "options": {
+        "lxc-networking": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "git@github.com:IBCNServices/tengu-charms.git",
+    "is": "lxc-networking"
+}

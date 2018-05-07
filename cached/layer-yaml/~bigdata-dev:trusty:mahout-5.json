@@ -1,0 +1,37 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:puppet-agent",
+        "interface:java",
+        "layer:basic",
+        "layer:apt",
+        "layer:apache-bigtop-base"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "dphys-swapfile",
+                "unzip"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "puppet-agent": {
+            "puppet-version": "3",
+            "silent": true
+        },
+        "mahout": {},
+        "apache-bigtop-base": {
+            "bigtop_version": "bigtop-1.1.0",
+            "bigtop_repo-x86_64": "http://bigtop-repos.s3.amazonaws.com/releases/1.1.0/ubuntu/trusty/x86_64",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_hiera_path": "/etc/puppet/hiera.yaml",
+            "bigtop_component_list": "hadoop",
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_repo-ppc64el": "http://bigtop-repos.s3.amazonaws.com/releases/1.1.0/ubuntu/vivid/ppc64el"
+        }
+    },
+    "repo": "https://github.com/jamesbeedy/layer-puppet-agent.git",
+    "is": "mahout"
+}

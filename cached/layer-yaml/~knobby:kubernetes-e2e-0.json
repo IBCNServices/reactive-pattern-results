@@ -1,0 +1,28 @@
+{
+    "options": {
+        "tls-client": {
+            "ca_certificate_path": "/srv/kubernetes/ca.crt",
+            "client_certificate_path": "/srv/kubernetes/client.crt",
+            "client_key_path": "/srv/kubernetes/client.key",
+            "server_certificate_path": "",
+            "server_key_path": ""
+        },
+        "snap": {},
+        "kubernetes-e2e": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "https://github.com/juju-solutions/layer-kubernetes-e2e",
+    "includes": [
+        "layer:basic",
+        "interface:tls-certificates",
+        "layer:tls-client",
+        "layer:snap",
+        "interface:http",
+        "interface:kube-control"
+    ],
+    "is": "kubernetes-e2e"
+}

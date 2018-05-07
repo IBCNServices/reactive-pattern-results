@@ -1,0 +1,14 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "vpil-collector": {}
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "vpil-collector"
+}

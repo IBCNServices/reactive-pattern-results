@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "gnupg"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "archive-auth-mirror": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:apache-website"
+    ],
+    "repo": "https://github.com/CanonicalLtd/archive-auth-mirror",
+    "is": "archive-auth-mirror"
+}

@@ -1,0 +1,17 @@
+{
+    "options": {
+        "version": {},
+        "thingworx-foundation-server": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:version"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-thingworx-platform.git",
+    "is": "thingworx-foundation-server"
+}

@@ -1,0 +1,28 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "pwgen"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-im": {},
+        "ibm-was-base": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-was-base/trunk/",
+    "includes": [
+        "layer:basic",
+        "layer:ibm-im",
+        "interface:was-ihs",
+        "interface:db2",
+        "interface:ibm-mq"
+    ],
+    "metadata": {
+        "deletes": [
+            "series"
+        ]
+    },
+    "is": "ibm-was-base"
+}

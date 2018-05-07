@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "dockerbeat": {},
+        "beats-base": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:elastic-beats",
+        "interface:elasticsearch",
+        "layer:beats-base"
+    ],
+    "repo": "http://github.com/juju-solutions/layer-dockerbeat",
+    "is": "dockerbeat"
+}

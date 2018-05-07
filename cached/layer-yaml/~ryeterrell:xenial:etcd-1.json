@@ -1,0 +1,34 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "openssl"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "tls": {},
+        "leadership": {},
+        "etcd": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:tls",
+        "layer:basic",
+        "layer:basic",
+        "layer:tls",
+        "layer:leadership",
+        "interface:etcd",
+        "interface:etcd-proxy"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-etcd.git",
+    "exclude": [
+        "tests/tests.yaml",
+        "tests/10-tls-deploy.py"
+    ],
+    "ignore": [
+        "tests"
+    ],
+    "is": "etcd"
+}

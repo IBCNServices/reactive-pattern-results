@@ -1,0 +1,20 @@
+{
+    "options": {
+        "salt-minion": {},
+        "salt-common": {},
+        "version": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:salt-common",
+        "layer:version",
+        "interface:salt"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-salt-minion.git",
+    "is": "salt-minion"
+}

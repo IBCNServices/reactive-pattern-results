@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:docker",
+        "interface:http"
+    ],
+    "is": "weave-scope"
+}

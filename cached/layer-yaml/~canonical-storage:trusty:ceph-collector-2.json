@@ -1,0 +1,16 @@
+{
+    "options": {
+        "ceph-collector": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:influxdb-api"
+    ],
+    "is": "ceph-collector"
+}

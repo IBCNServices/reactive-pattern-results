@@ -1,0 +1,8 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:openvswitch",
+        "interface:master-config",
+        "interface:juju-info"
+    ]
+}

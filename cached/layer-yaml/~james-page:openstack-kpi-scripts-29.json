@@ -1,0 +1,15 @@
+{
+    "options": {
+        "openstack-kpi-scripts": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "https://code.launchpad.net/~canonical-losas/canonical-is-charms/snappy-kpi-scripts",
+    "is": "openstack-kpi-scripts"
+}

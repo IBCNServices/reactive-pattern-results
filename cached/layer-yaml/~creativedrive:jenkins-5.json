@@ -1,0 +1,30 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "jenkins",
+                "default-jre-headless",
+                "pwgen",
+                "python-jenkins",
+                "git",
+                "gcc",
+                "make",
+                "bzr",
+                "jenkins"
+            ]
+        },
+        "jenkins": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http"
+    ],
+    "repo": "git@github.com:jamesbeedy/juju-charm-jenkins.git",
+    "is": "jenkins"
+}

@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "openstack": {},
+        "barbican-softhsm": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "interface:barbican-hsm"
+    ],
+    "repo": "https://github.com/openstack/charm-barbican-softhsm",
+    "is": "barbican-softhsm"
+}

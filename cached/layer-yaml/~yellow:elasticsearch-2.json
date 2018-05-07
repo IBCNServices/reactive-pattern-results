@@ -1,0 +1,36 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "python3-wheel"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "config": {
+            "path": "elasticsearch.yml",
+            "owner": "root"
+        },
+        "service": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "elasticsearch": {},
+        "payload": {
+            "owner": "root"
+        }
+    },
+    "repo": "https://github.com/CanonicalLtd/blues-layers",
+    "includes": [
+        "layer:basic",
+        "layer:config",
+        "layer:payload",
+        "layer:service",
+        "layer:apt",
+        "interface:elasticsearch"
+    ],
+    "is": "elasticsearch"
+}

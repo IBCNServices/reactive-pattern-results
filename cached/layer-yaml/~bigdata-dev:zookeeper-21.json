@@ -1,0 +1,48 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "puppet-common",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-bigtop-base": {
+            "ports": {
+                "zookeeper-rest": {
+                    "port": 9998,
+                    "exposed_on": "zookeeper"
+                },
+                "zookeeper": {
+                    "port": 2181,
+                    "exposed_on": "zookeeper"
+                }
+            },
+            "install_java": "openjdk-8-jdk",
+            "bigtop_component_list": "hadoop",
+            "bigtop_version": "1.2.0"
+        },
+        "leadership": {},
+        "zookeeper": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "interface:java",
+        "layer:apache-bigtop-base",
+        "layer:leadership",
+        "interface:zookeeper-quorum",
+        "interface:zookeeper"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/zookeeper/layer-zookeeper",
+    "is": "zookeeper"
+}

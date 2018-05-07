@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "gnupg-curl"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "mongodb": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:mongodb"
+    ],
+    "repo": "https://github.com/marcoceppi/layer-mongodb.git",
+    "is": "mongodb"
+}

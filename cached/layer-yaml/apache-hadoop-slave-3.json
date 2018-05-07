@@ -1,0 +1,50 @@
+{
+    "options": {
+        "hadoop-base": {
+            "ports": {
+                "dn_webapp_http": {
+                    "port": 50075,
+                    "exposed_on": "datanode"
+                },
+                "jn_http": {
+                    "port": 8480,
+                    "exposed_on": "datanode"
+                },
+                "journalnode": {
+                    "port": 8485
+                },
+                "jn_webapp_http": {
+                    "port": 8480,
+                    "exposed_on": "datanode"
+                },
+                "jn_webapp_https": {
+                    "port": 8481,
+                    "exposed_on": "datanode"
+                }
+            }
+        },
+        "apache-hadoop-slave": {},
+        "apache-hadoop-nodemanager": {},
+        "hadoop-ganglia": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "apache-hadoop-datanode": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:monitor",
+        "layer:hadoop-base",
+        "layer:hadoop-ganglia",
+        "interface:dfs-slave",
+        "layer:hadoop-base",
+        "layer:hadoop-ganglia",
+        "interface:mapred-slave",
+        "layer:apache-hadoop-datanode",
+        "layer:apache-hadoop-nodemanager"
+    ],
+    "repo": "git@github.com:juju-solutions/layer-apache-hadoop-slave.git",
+    "is": "apache-hadoop-slave"
+}

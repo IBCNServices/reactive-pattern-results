@@ -1,0 +1,32 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-psycopg2"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "snap": {
+            "vault": {
+                "channel": "stable"
+            }
+        },
+        "vault": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:nrpe-external-master",
+        "interface:pgsql"
+    ],
+    "repo": "https://git.launchpad.net/layer-snap",
+    "resources": {
+        "vault": {
+            "type": "file",
+            "filename": "vault.snap",
+            "description": "Vault snap"
+        }
+    },
+    "is": "vault"
+}

@@ -1,0 +1,27 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "python3-setuptools",
+                "python3-wheel",
+                "python3-yaml"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "snap": {
+            "canonical-livepatch": {
+                "channel": "stable"
+            }
+        },
+        "canonical-livepatch": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:nrpe-external-master"
+    ],
+    "repo": "lp:~livepatch-charmers/canonical-livepatch-charm/+git/canonical-livepatch-charm",
+    "is": "canonical-livepatch"
+}

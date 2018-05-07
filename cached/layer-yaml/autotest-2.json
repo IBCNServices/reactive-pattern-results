@@ -1,0 +1,24 @@
+{
+    "repo": "https://github.com/mreed8855/layer-autotest.git",
+    "includes": [
+        "layer:basic",
+        "layer:apt"
+    ],
+    "options": {
+        "apt": {
+            "packages": [
+                "git",
+                "gcc",
+                "dh-autoreconf",
+                "autoconf",
+                "python-pexpect",
+                "libkeyutils-dev",
+                "libattr1-dev",
+                "automake",
+                "python-apt",
+                "build-essential",
+                "gdb"
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "newrelic-sysmond"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "newrelic-sysmond": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt"
+    ],
+    "repo": "https://github.com/jamesbeedy/juju-layer-newrelic-sysmond",
+    "is": "newrelic-sysmond"
+}

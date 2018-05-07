@@ -1,0 +1,24 @@
+{
+    "options": {
+        "openstack-principle": {},
+        "openstack": {},
+        "openstack-api": {},
+        "aodh": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "layer:openstack-principle",
+        "interface:mysql-shared",
+        "interface:rabbitmq",
+        "interface:keystone",
+        "layer:openstack-api",
+        "interface:mongodb"
+    ],
+    "is": "aodh"
+}

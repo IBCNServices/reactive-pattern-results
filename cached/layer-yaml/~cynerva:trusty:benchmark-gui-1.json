@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-requests"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "benchmark-gui": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:benchmark",
+        "interface:benchmark-collector"
+    ],
+    "is": "benchmark-gui"
+}

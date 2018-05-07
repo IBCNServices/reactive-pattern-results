@@ -1,0 +1,32 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "nginx-full",
+                "apache2-utils"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "lets-encrypt": {
+            "service-name": "nginx"
+        },
+        "nginx": {},
+        "ssl-termination-proxy": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "interface:http",
+        "layer:nginx",
+        "layer:lets-encrypt",
+        "interface:ssl-termination"
+    ],
+    "repo": "git@github.com:tengu-team/layer-ssl-termination-proxy.git",
+    "is": "ssl-termination-proxy"
+}

@@ -1,0 +1,22 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "--no-install-recommends",
+                "php5-cli"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "nginx": {},
+        "wallabag": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "layer:basic",
+        "layer:nginx",
+        "interface:mysql"
+    ],
+    "is": "wallabag"
+}

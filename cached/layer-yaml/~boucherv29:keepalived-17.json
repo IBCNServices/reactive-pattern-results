@@ -1,0 +1,15 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "keepalived": {}
+    },
+    "repo": "https://github.com/juju-solutions/charm-flannel.git",
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "keepalived"
+}

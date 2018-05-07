@@ -1,0 +1,19 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apache-flume-base",
+        "interface:flume-agent",
+        "interface:kafka"
+    ],
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "apache-flume-base": {},
+        "apache-flume-kafka": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-flume-kafka.git",
+    "is": "apache-flume-kafka"
+}

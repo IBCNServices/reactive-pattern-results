@@ -1,0 +1,29 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "apt-transport-https",
+                "arangodb3"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "leadership": {},
+        "arangodb": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:leadership",
+        "layer:metrics",
+        "layer:apt",
+        "interface:arangodb"
+    ],
+    "repo": "git@github.com:tengu-team/layer-arangodb.git",
+    "is": "arangodb"
+}

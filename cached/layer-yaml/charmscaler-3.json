@@ -1,0 +1,35 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "nagios": {},
+        "charmscaler": {},
+        "charmscaler-base": {},
+        "debug": {},
+        "docker": {
+            "skip-install": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "layer:debug",
+        "layer:nagios",
+        "interface:dockerhost",
+        "interface:sdn-plugin",
+        "layer:docker",
+        "interface:influxdb-api",
+        "interface:juju-info",
+        "layer:charmscaler-base"
+    ],
+    "repo": "https://github.com/elastisys/layer-charmscaler",
+    "exclude": [
+        "LAYER_README.md",
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "charmscaler"
+}

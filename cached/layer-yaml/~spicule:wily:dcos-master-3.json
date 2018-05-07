@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "ipset"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "dcos-master": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:dcos"
+    ],
+    "repo": "https://github.com/buggtb/dcos-master-charm.git",
+    "is": "dcos-master"
+}

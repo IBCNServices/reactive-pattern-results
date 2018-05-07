@@ -1,0 +1,16 @@
+{
+    "options": {
+        "dhcp-server": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:opened-ports"
+    ],
+    "repo": "git@github.com:IBCNServices/tengu-charms.git",
+    "is": "dhcp-server"
+}

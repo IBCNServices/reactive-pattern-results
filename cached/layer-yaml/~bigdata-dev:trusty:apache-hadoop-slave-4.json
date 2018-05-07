@@ -1,0 +1,35 @@
+{
+    "repo": "git@github.com:juju-solutions/layer-apache-hadoop-slave.git",
+    "includes": [
+        "layer:hadoop-base",
+        "layer:hadoop-ganglia",
+        "interface:dfs-slave",
+        "layer:basic",
+        "interface:monitor",
+        "layer:hadoop-base",
+        "layer:hadoop-ganglia",
+        "interface:mapred-slave",
+        "layer:apache-hadoop-datanode",
+        "layer:apache-hadoop-nodemanager"
+    ],
+    "options": {
+        "hadoop-base": {
+            "ports": {
+                "dn_webapp_http": {
+                    "port": 50075,
+                    "exposed_on": "datanode"
+                }
+            }
+        },
+        "apache-hadoop-slave": {},
+        "apache-hadoop-nodemanager": {},
+        "hadoop-ganglia": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "apache-hadoop-datanode": {}
+    },
+    "is": "apache-hadoop-slave"
+}

@@ -1,0 +1,24 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "python-pip",
+                "neo4j"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "neo4j": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt"
+    ],
+    "repo": "git@github.com/tengu-team/layer-neo4j.git",
+    "is": "neo4j"
+}

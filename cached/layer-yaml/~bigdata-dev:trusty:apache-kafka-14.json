@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "default-jre-headless"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-kafka": {}
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-kafka.git",
+    "includes": [
+        "layer:basic",
+        "interface:zookeeper",
+        "interface:kafka"
+    ],
+    "is": "apache-kafka"
+}

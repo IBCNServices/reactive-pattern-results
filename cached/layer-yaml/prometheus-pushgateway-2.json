@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "snap": {},
+        "prometheus-pushgateway": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:http",
+        "interface:nrpe-external-master"
+    ],
+    "repo": "https://git.launchpad.net/prometheus-pushgateway-charm",
+    "ignore": {
+        "prometheus-pushgateway": [
+            ".*.swp"
+        ]
+    },
+    "is": "prometheus-pushgateway"
+}

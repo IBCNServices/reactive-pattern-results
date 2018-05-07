@@ -1,0 +1,16 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "insightedge-core": {}
+    },
+    "repo": "git@github.com:juju-solutions/charm-insightedge-core.git",
+    "includes": [
+        "layer:basic",
+        "interface:spark"
+    ],
+    "is": "insightedge-core"
+}

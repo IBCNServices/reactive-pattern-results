@@ -1,0 +1,53 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "dphys-swapfile",
+                "unzip"
+            ],
+            "use_venv": true,
+            "include_system_packages": false
+        },
+        "puppet-agent": {
+            "puppet-version": "3",
+            "silent": true
+        },
+        "hadoop-plugin": {},
+        "apache-bigtop-base": {
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_version": "1.1.0",
+            "install_java": "openjdk-8-jdk",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_global_hiera": "/etc/puppet/hiera.yaml",
+            "bigtop_component_list": "hadoop",
+            "bigtop_repo_url": "http://bigtop-repos.s3.amazonaws.com/releases/{version}/{dist}/{series}/{arch}"
+        },
+        "apt": {
+            "packages": []
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-hadoop-plugin.git",
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:basic",
+        "interface:java",
+        "layer:puppet-agent",
+        "layer:apache-bigtop-base",
+        "interface:hadoop-plugin",
+        "interface:dfs",
+        "interface:mapred"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "metadata": {
+        "deletes": [
+            "requires.java"
+        ]
+    },
+    "is": "hadoop-plugin"
+}

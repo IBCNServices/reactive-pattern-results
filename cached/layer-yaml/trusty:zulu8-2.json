@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "interface:java"
+    ],
+    "is": "zulu8"
+}

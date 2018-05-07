@@ -1,0 +1,16 @@
+{
+    "options": {
+        "data-source": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:activemq-topic"
+    ],
+    "repo": "https://github.com/Qrama/layer-data-source.git",
+    "is": "data-source"
+}

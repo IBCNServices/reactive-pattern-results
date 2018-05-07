@@ -1,0 +1,7 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apt"
+    ],
+    "repo": "lp:~cron-charmers/cron-charm/trunk"
+}

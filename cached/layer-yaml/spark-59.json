@@ -1,0 +1,75 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "git",
+                "wget",
+                "puppet-common",
+                "unzip",
+                "bc",
+                "libgfortran3"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "hadoop-client": {
+            "dirs": {
+                "spark_events": {
+                    "path": "/var/log/spark/apps"
+                },
+                "spark_home": {
+                    "path": "/usr/lib/spark"
+                }
+            },
+            "ports": {
+                "spark-history-ui": {
+                    "port": 18080,
+                    "exposed_on": "spark"
+                },
+                "spark-master-ui": {
+                    "port": 8080,
+                    "exposed_on": "spark"
+                },
+                "spark-worker-ui": {
+                    "port": 8081,
+                    "exposed_on": "spark"
+                }
+            },
+            "packages": [],
+            "groups": [],
+            "users": {},
+            "silent": false
+        },
+        "apache-bigtop-base": {
+            "install_java": "openjdk-8-jdk-headless",
+            "bigtop_component_list": "hadoop"
+        },
+        "nvidia-cuda": {},
+        "leadership": {},
+        "spark": {}
+    },
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/spark/layer-spark",
+    "includes": [
+        "layer:basic",
+        "layer:metrics",
+        "layer:nvidia-cuda",
+        "interface:java",
+        "interface:hadoop-plugin",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client",
+        "layer:leadership",
+        "interface:benchmark",
+        "interface:spark",
+        "interface:zookeeper",
+        "interface:spark-quorum"
+    ],
+    "ignore": {
+        "apache-bigtop-base": [
+            "tests/unit",
+            "tox_unit.ini",
+            "unit_test_requirements.txt"
+        ]
+    },
+    "is": "spark"
+}

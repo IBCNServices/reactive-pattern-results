@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "tar",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-spectrum-scale-manager": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/ibmlayers/layer-ibm-spectrum-scale-manager/",
+    "includes": [
+        "layer:basic",
+        "interface:gpfs"
+    ],
+    "is": "ibm-spectrum-scale-manager"
+}

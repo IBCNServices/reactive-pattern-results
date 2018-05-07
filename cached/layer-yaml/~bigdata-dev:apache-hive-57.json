@@ -1,0 +1,51 @@
+{
+    "options": {
+        "hadoop-client": {
+            "packages": [
+                "libmysql-java",
+                "mysql-client"
+            ],
+            "users": {
+                "hive": {
+                    "groups": [
+                        "hadoop"
+                    ]
+                }
+            },
+            "dirs": {
+                "hive": {
+                    "path": "/usr/lib/hive",
+                    "owner": "hive",
+                    "group": "hadoop"
+                },
+                "hive_conf": {
+                    "path": "/etc/hive/conf"
+                }
+            },
+            "ports": {
+                "hive": {
+                    "port": 10000,
+                    "exposed_on": "hive"
+                }
+            },
+            "groups": [],
+            "silent": false
+        },
+        "apache-hive": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-hive.git",
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:hadoop-client",
+        "interface:mysql",
+        "interface:hive"
+    ],
+    "is": "apache-hive"
+}

@@ -1,0 +1,18 @@
+{
+    "options": {
+        "openstack": {},
+        "manila-generic": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "interface:manila-plugin"
+    ],
+    "repo": "https://github.com/openstack/charm-manila-generic",
+    "is": "manila-generic"
+}

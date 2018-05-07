@@ -1,0 +1,6 @@
+{
+    "includes": [
+        "layer:basic"
+    ],
+    "is": "locust"
+}

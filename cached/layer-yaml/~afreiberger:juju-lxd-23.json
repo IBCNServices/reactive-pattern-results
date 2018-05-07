@@ -1,0 +1,59 @@
+{
+    "options": {
+        "snap": {
+            "juju": {
+                "channel": "stable",
+                "devmode": false,
+                "jailmode": false,
+                "dangerous": false,
+                "classic": true,
+                "revision": null
+            },
+            "charm": {
+                "channel": "stable",
+                "devmode": false,
+                "jailmode": false,
+                "dangerous": false,
+                "classic": true,
+                "revision": null
+            }
+        },
+        "apt": {
+            "packages": [
+                "zfsutils-linux",
+                "squid-deb-proxy",
+                "python-novaclient",
+                "python-keystoneclient",
+                "python-glanceclient",
+                "python-neutronclient",
+                "python-openstackclient",
+                "git",
+                "bzr",
+                "tox",
+                "python-pip",
+                "python-all-dev"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "juju-lxd": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "layer:apt"
+    ],
+    "repo": "https://code.launchpad.net/charm-juju-lxd",
+    "ignore": {
+        "juju-lxd": [
+            ".*.swp",
+            ".git"
+        ]
+    },
+    "is": "juju-lxd"
+}

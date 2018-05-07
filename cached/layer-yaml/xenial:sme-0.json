@@ -1,0 +1,76 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apt": {
+            "packages": [
+                "apache2",
+                "language-pack-en-base",
+                "vim",
+                "mysql-client-core-5.7",
+                "iptables",
+                "iftop",
+                "apache2-utils",
+                "git",
+                "iptraf-ng",
+                "apache2",
+                "wget",
+                "unzip",
+                "mc",
+                "apache2-utils",
+                "htop",
+                "nano",
+                "libapache2-mod-auth-kerb",
+                "tree",
+                "python-crypto",
+                "python-pexpect",
+                "apache2-suexec-custom",
+                "libnet-dns-perl",
+                "psmisc",
+                "libnet-dns-perl",
+                "cifs-utils",
+                "ntp",
+                "apache2-suexec-custom",
+                "python-pexpect",
+                "python-crypto",
+                "memcached",
+                "cpanminus",
+                "vsftpd",
+                "telnet",
+                "lftp",
+                "zip",
+                "libcrypt-rijndael-perl",
+                "libxml-parser-perl",
+                "libauthen-sasl-perl",
+                "libdigest-perl-md5-perl",
+                "libwww-perl",
+                "libconfig-general-perl",
+                "libxml-simple-perl",
+                "libcache-memcached-perl",
+                "libdigest-hmac-perl",
+                "liblwp-protocol-https-perl",
+                "libio-handle-util-perl",
+                "python-requests",
+                "python-beautifulsoup",
+                "openjdk-7-jdk"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "sme": {},
+        "leadership": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "interface:mysql"
+    ],
+    "is": "sme"
+}

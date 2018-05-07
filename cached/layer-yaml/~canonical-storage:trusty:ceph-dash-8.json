@@ -1,0 +1,10 @@
+{
+    "includes": [
+        "layer:rails",
+        "interface:influxdb-api"
+    ],
+    "options": {
+        "ceph-dash": {}
+    },
+    "is": "ceph-dash"
+}

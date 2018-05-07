@@ -1,0 +1,27 @@
+{
+    "options": {
+        "docker": {
+            "skip-install": false
+        },
+        "restcomm": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:sdn-plugin",
+        "layer:docker",
+        "interface:mysql",
+        "interface:http"
+    ],
+    "repo": "https://github.com/juju-solutions/layer-docker.git",
+    "exclude": [
+        "LAYER_README.md",
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "restcomm"
+}

@@ -1,0 +1,26 @@
+{
+    "options": {
+        "backup": {
+            "backup-name": "sabnzbd",
+            "backup-files": "/home/{sabuser}/.sabnzbd"
+        },
+        "sabnzbd": {},
+        "version": {},
+        "hostname": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:version",
+        "layer:hostname",
+        "layer:backup",
+        "interface:usenet-downloader",
+        "interface:reverseproxy"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-sabnzbd.git",
+    "is": "sabnzbd"
+}

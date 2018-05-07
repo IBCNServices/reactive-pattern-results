@@ -1,0 +1,25 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "build-essential",
+                "python3-setuptools",
+                "python3-wheel",
+                "python3-yaml"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "cassandra-backup": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt"
+    ],
+    "is": "cassandra-backup"
+}

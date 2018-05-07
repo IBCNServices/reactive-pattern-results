@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "unzip",
+                "rpm",
+                "php5-snmp"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-platform-rtm": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-platform-rtm/trunk/",
+    "includes": [
+        "layer:basic",
+        "interface:mysql-root"
+    ],
+    "is": "ibm-platform-rtm"
+}

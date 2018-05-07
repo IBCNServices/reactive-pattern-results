@@ -1,0 +1,71 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "puppet-common",
+                "unzip",
+                "bc",
+                "libgfortran3"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "hadoop-client": {
+            "groups": [
+                "hadoop"
+            ],
+            "dirs": {
+                "spark_events": {
+                    "path": "/var/log/spark/apps"
+                }
+            },
+            "ports": {
+                "spark-history": {
+                    "port": 18080,
+                    "exposed_on": "spark"
+                },
+                "spark-webui": {
+                    "port": 8080,
+                    "exposed_on": "spark"
+                }
+            },
+            "packages": [],
+            "users": {},
+            "silent": false
+        },
+        "spark": {},
+        "leadership": {},
+        "apache-bigtop-base": {
+            "bigtop_hiera_config": "bigtop-deploy/puppet/hiera.yaml",
+            "bigtop_version": "1.1.0",
+            "install_java": "openjdk-8-jdk",
+            "bigtop_hiera_siteyaml": "bigtop-deploy/puppet/hieradata/site.yaml",
+            "bigtop_release_url": "https://www.apache.org/dist/bigtop/bigtop-1.1.0/bigtop-1.1.0-project.tar.gz?sha1=abeb9fec87f3923948e506e37a196bc490512eba",
+            "bigtop_global_hiera": "/etc/puppet/hiera.yaml",
+            "bigtop_component_list": "hadoop",
+            "bigtop_repo_url": "http://bigtop-repos.s3.amazonaws.com/releases/{version}/{dist}/{series}/{arch}"
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:java",
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "interface:java",
+        "layer:basic",
+        "layer:apache-bigtop-base",
+        "layer:hadoop-client",
+        "layer:leadership",
+        "interface:benchmark",
+        "interface:spark",
+        "interface:zookeeper",
+        "interface:spark-quorum"
+    ],
+    "ignore": [
+        "tests/unit",
+        "tox_unit.ini",
+        "unit_test_requirements.txt"
+    ],
+    "repo": "https://github.com/apache/bigtop/tree/master/bigtop-packages/src/charm/spark/layer-spark",
+    "is": "spark"
+}

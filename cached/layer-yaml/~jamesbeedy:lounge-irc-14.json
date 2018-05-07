@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "lounge-irc": {},
+        "apt": {
+            "version_package": "",
+            "packages": [],
+            "full_version": false
+        },
+        "nodejs": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:nodejs",
+        "interface:http"
+    ],
+    "repo": "https://github.com/jamesbeedy/layer-lounge",
+    "is": "lounge-irc"
+}

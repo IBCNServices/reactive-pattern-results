@@ -1,0 +1,29 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-base",
+        "interface:db2"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "binutils",
+                "pwgen",
+                "tar"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {},
+        "ibm-db2": {},
+        "apt": {
+            "packages": []
+        }
+    },
+    "is": "ibm-db2"
+}

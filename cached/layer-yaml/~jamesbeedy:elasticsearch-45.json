@@ -1,0 +1,30 @@
+{
+    "options": {
+        "apt": {
+            "packages": [
+                "openjdk-8-jre-headless"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "elastic-base": {
+            "elastic-pkg": "elasticsearch"
+        },
+        "leadership": {},
+        "elasticsearch": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:elastic-base",
+        "layer:leadership",
+        "interface:elasticsearch"
+    ],
+    "repo": "https://github.com/jamesbeedy/juju-layer-elasticsearch-base",
+    "is": "elasticsearch"
+}

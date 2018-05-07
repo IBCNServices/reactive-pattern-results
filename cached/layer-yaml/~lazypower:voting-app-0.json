@@ -1,0 +1,22 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:docker",
+        "interface:pgsql",
+        "interface:redis",
+        "interface:http"
+    ],
+    "repo": "https://github.com/charm-school/layer-docker-blog-samples",
+    "options": {
+        "docker": {
+            "skip-install": false
+        },
+        "voting-app": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "is": "voting-app"
+}

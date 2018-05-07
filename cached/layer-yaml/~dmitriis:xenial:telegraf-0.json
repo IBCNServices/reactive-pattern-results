@@ -1,0 +1,38 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-requests",
+                "python3-yaml"
+            ],
+            "use_venv": true,
+            "include_system_packages": true
+        },
+        "apt": {
+            "packages": [
+                "telegraf"
+            ],
+            "version_package": "",
+            "full_version": false
+        },
+        "telegraf": {},
+        "ntpmon": {},
+        "promreg-client": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:ntpmon",
+        "layer:promreg-client",
+        "interface:elasticsearch",
+        "interface:influxdb-api",
+        "interface:memcache",
+        "interface:mongodb",
+        "interface:pgsql",
+        "interface:mysql-root",
+        "interface:juju-info",
+        "interface:http"
+    ],
+    "repo": "https://git.launchpad.net/telegraf-charm",
+    "is": "telegraf"
+}

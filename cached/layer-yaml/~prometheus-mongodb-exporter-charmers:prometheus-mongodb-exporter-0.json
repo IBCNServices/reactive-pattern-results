@@ -1,0 +1,17 @@
+{
+    "options": {
+        "snap": {},
+        "prometheus-mongodb-exporter": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap"
+    ],
+    "repo": "https://git.launchpad.net/prometheus-mongodb-exporter-charm",
+    "is": "prometheus-mongodb-exporter"
+}

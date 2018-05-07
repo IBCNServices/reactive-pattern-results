@@ -1,0 +1,19 @@
+{
+    "options": {
+        "snap": {},
+        "kubernetes-worker": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:snap",
+        "interface:kubernetes-cni",
+        "interface:k8s-config"
+    ],
+    "repo": "https://git.launchpad.net/layer-snap",
+    "is": "kubernetes-worker"
+}

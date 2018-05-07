@@ -1,0 +1,19 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "apache-zeppelin": {
+            "implementation_class": "charms.layer.apache_zeppelin.Zeppelin"
+        }
+    },
+    "repo": "git@github.com:juju-solutions/layer-apache-zeppelin.git",
+    "includes": [
+        "layer:basic",
+        "interface:spark",
+        "interface:zeppelin"
+    ],
+    "is": "apache-zeppelin"
+}

@@ -1,0 +1,45 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "git",
+                "openssl",
+                "build-essential",
+                "libreadline-dev",
+                "libssl-dev",
+                "libgmp-dev",
+                "libffi-dev",
+                "libyaml-dev",
+                "libxslt-dev",
+                "zlib1g-dev",
+                "libgdbm-dev",
+                "openssl",
+                "libicu-dev",
+                "cmake",
+                "pkg-config",
+                "libxml2-dev",
+                "libncurses5-dev",
+                "git"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "tls": {},
+        "tls-test": {},
+        "ruby": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:tls",
+        "layer:basic",
+        "layer:basic",
+        "layer:tls",
+        "layer:ruby"
+    ],
+    "repo": "https://github.com/jamesbeedy/tls-test.git",
+    "exclude": [
+        "tests/10-deploy.py",
+        "tests/tests.yaml"
+    ],
+    "is": "tls-test"
+}

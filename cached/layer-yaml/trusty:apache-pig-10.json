@@ -1,0 +1,32 @@
+{
+    "repo": "git@github.com:juju-solutions/layer-apache-pig.git",
+    "includes": [
+        "layer:basic",
+        "interface:hadoop-plugin",
+        "layer:hadoop-client"
+    ],
+    "options": {
+        "hadoop-client": {
+            "dirs": {
+                "pig": {
+                    "path": "/usr/lib/pig"
+                },
+                "pig_conf": {
+                    "path": "/etc/pig/conf"
+                }
+            },
+            "silent": true,
+            "packages": [],
+            "groups": [],
+            "users": {},
+            "ports": {}
+        },
+        "apache-pig": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "is": "apache-pig"
+}

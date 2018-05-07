@@ -1,0 +1,29 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "include_system_packages": true,
+            "packages": []
+        },
+        "snap": {
+            "prometheus-ceph-exporter": {
+                "channel": "stable"
+            }
+        },
+        "prometheus-ceph-exporter": {}
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "layer:snap",
+        "interface:ceph-client",
+        "interface:nrpe-external-master"
+    ],
+    "repo": "https://git.launchpad.net/prometheus-ceph-exporter-charm",
+    "ignore": {
+        "prometheus-ceph-exporter": [
+            ".*.swp"
+        ]
+    },
+    "is": "prometheus-ceph-exporter"
+}

@@ -1,0 +1,18 @@
+{
+    "options": {
+        "slurm": {},
+        "slurm-controller": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:slurm",
+        "interface:slurm-cluster"
+    ],
+    "repo": "https://github.com/hunt-genes/charm-slurm-controller",
+    "is": "slurm-controller"
+}

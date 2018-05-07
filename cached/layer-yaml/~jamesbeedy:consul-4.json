@@ -1,0 +1,20 @@
+{
+    "options": {
+        "consul-base": {
+            "server": true,
+            "web-ui": true
+        },
+        "consul": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "layer:consul-base"
+    ],
+    "repo": "https://github.com/jamesbeedy/charm-consul",
+    "is": "consul"
+}

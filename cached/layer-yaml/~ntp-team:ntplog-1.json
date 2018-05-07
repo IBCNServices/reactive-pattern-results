@@ -1,0 +1,15 @@
+{
+    "options": {
+        "ntplog": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic"
+    ],
+    "repo": "git+ssh://git.launchpad.net/ntplog-charm",
+    "is": "ntplog"
+}

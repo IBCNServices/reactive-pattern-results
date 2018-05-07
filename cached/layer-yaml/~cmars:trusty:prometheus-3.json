@@ -1,0 +1,21 @@
+{
+    "options": {
+        "prometheus": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:http",
+        "interface:nrpe-external-master",
+        "interface:grafana-source",
+        "interface:prometheus"
+    ],
+    "ignore": [
+        ".*.swp"
+    ],
+    "is": "prometheus"
+}

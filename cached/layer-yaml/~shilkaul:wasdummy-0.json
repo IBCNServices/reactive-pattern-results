@@ -1,0 +1,15 @@
+{
+    "options": {
+        "wasdummy": {},
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        }
+    },
+    "includes": [
+        "layer:basic",
+        "interface:ibm-mq"
+    ],
+    "is": "wasdummy"
+}

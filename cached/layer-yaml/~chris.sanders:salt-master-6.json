@@ -1,0 +1,24 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-cryptography"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "salt-common": {},
+        "hostname": {},
+        "salt-master": {},
+        "version": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:salt-common",
+        "layer:hostname",
+        "layer:version",
+        "interface:salt"
+    ],
+    "repo": "git@github.com:chris-sanders/layer-salt-master.git",
+    "is": "salt-master"
+}

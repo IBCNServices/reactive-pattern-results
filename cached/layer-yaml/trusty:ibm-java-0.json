@@ -1,0 +1,18 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": true,
+            "packages": [
+                "expect"
+            ],
+            "include_system_packages": false
+        },
+        "ibm-java": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/ibm-java/source",
+    "includes": [
+        "layer:basic",
+        "interface:java"
+    ],
+    "is": "ibm-java"
+}

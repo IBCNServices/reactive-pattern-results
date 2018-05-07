@@ -1,0 +1,23 @@
+{
+    "includes": [
+        "layer:basic",
+        "layer:apt",
+        "layer:leadership",
+        "layer:basic",
+        "layer:ibm-base"
+    ],
+    "options": {
+        "basic": {
+            "packages": [
+                "curl",
+                "unzip"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "ibm-base": {},
+        "leadership": {}
+    },
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-im/trunk/",
+    "is": "ibm-im"
+}

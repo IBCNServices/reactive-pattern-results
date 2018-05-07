@@ -1,0 +1,21 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "python3-libvirt",
+                "python3-pylxd"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "openstack": {},
+        "virtual-accelerator-network": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:openstack",
+        "layer:6wind-common"
+    ],
+    "repo": "https://github.com/openstack/charm-layer-openstack",
+    "is": "virtual-accelerator-network"
+}

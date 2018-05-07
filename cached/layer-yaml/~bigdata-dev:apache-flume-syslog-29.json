@@ -1,0 +1,21 @@
+{
+    "options": {
+        "basic": {
+            "packages": [
+                "openjdk-8-jdk-headless"
+            ],
+            "use_venv": false,
+            "include_system_packages": false
+        },
+        "apache-flume-base": {},
+        "apache-flume-syslog": {}
+    },
+    "includes": [
+        "layer:basic",
+        "layer:apache-flume-base",
+        "interface:flume-agent",
+        "interface:syslog"
+    ],
+    "repo": "git@github.com:juju-solutions/layer-apache-flume-syslog.git",
+    "is": "apache-flume-syslog"
+}

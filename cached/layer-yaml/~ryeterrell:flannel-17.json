@@ -1,0 +1,20 @@
+{
+    "options": {
+        "basic": {
+            "use_venv": false,
+            "packages": [],
+            "include_system_packages": false
+        },
+        "nagios": {},
+        "flannel": {}
+    },
+    "repo": "https://github.com/juju-solutions/charm-flannel.git",
+    "includes": [
+        "layer:basic",
+        "interface:nrpe-external-master",
+        "interface:etcd",
+        "interface:kubernetes-cni",
+        "layer:nagios"
+    ],
+    "is": "flannel"
+}

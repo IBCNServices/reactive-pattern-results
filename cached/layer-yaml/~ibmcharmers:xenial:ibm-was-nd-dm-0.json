@@ -1,0 +1,9 @@
+{
+    "repo": "bzr+ssh://bazaar.launchpad.net/~ibmcharmers/charms/trusty/layer-ibm-was-nd-dm/trunk/",
+    "includes": [
+        "layer:ibm-was-nd",
+        "interface:was-nd",
+        "interface:dm-node",
+        "interface:was-ihs"
+    ]
+}
